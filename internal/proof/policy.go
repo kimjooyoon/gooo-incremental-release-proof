@@ -157,7 +157,7 @@ func parseRecord(policy *Policy, tokens []string, lineNo int) error {
 		if len(tokens) < 3 {
 			return bad("activity is incomplete")
 		}
-		pairs, err := pairsAfter(tokens, 2)
+		pairs, err := pairsAfter(tokens, 1)
 		if err != nil {
 			return bad(err.Error())
 		}
@@ -176,7 +176,7 @@ func parseRecord(policy *Policy, tokens []string, lineNo int) error {
 		if len(tokens) < 3 {
 			return bad("scenario is incomplete")
 		}
-		pairs, err := pairsAfter(tokens, 2)
+		pairs, err := pairsAfter(tokens, 3)
 		if err != nil {
 			return bad(err.Error())
 		}
@@ -184,7 +184,7 @@ func parseRecord(policy *Policy, tokens []string, lineNo int) error {
 		if err != nil {
 			return bad("scenario replay is not boolean")
 		}
-		policy.Scenarios = append(policy.Scenarios, ScenarioSpec{ID: tokens[1], Expected: Status(pairs["expected"]), Rule: pairs["rule"], Replay: replay})
+		policy.Scenarios = append(policy.Scenarios, ScenarioSpec{ID: tokens[2], Expected: Status(pairs["expected"]), Rule: pairs["rule"], Replay: replay})
 	default:
 		return bad("unknown .gooo record " + tokens[0])
 	}
