@@ -143,11 +143,14 @@ func parseRecord(policy *Policy, tokens []string, lineNo int) error {
 			*target = value
 		}
 	case "generation":
-		pairs, err := pairsAfter(tokens, 2)
-		if err != nil || len(tokens) < 2 {
+		if len(tokens) < 3 {
 			return bad("generation is incomplete")
 		}
-		policy.Generation.Language = tokens[1]
+		pairs, err := pairsAfter(tokens, 3)
+		if err != nil {
+			return bad(err.Error())
+		}
+		policy.Generation.Language = tokens[2]
 		policy.Generation.Role = pairs["role"]
 		policy.Generation.OutputScope = pairs["output_scope"]
 	case "activity":
