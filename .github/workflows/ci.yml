@@ -1,0 +1,145 @@
+name: gooo incremental release proof CI
+
+"on":
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: gooo-incremental-release-proof-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    env:
+      SUBJECT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - name: Checkout exact subject
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ env.SUBJECT_SHA }}
+          fetch-depth: 0
+
+      - name: Install Go 1.27
+        uses: actions/setup-go@v6
+        with:
+          go-version: 1.27.0
+          cache: false
+
+      - name: Verify authority boundary
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          test "$(go env GOVERSION)" = "go1.27.0"
+          test "$(go env GOOS)" = "linux"
+          test "$(go env GOARCH)" = "amd64"
+          test "$(git ls-files 'README.md' | wc -l | tr -d ' ')" = 1
+          EVIDENCE_ROOT="$RUNNER_TEMP/gooo-incremental-release-proof"
+          echo "EVIDENCE_ROOT=$EVIDENCE_ROOT" >>"$GITHUB_ENV"
+          mkdir -p "$EVIDENCE_ROOT/metrics" "$EVIDENCE_ROOT/conformance" "$EVIDENCE_ROOT/integration"
+
+      - name: Verify formatting without modifying checkout
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          files=$(git ls-files '*.go')
+          format_report=$(gofmt -l $files)
+          if [[ -n "$format_report" ]]; then
+            printf '%s\n' "$format_report" >"$EVIDENCE_ROOT/metrics/gofmt-files.txt"
+            echo 'format_status=UNKNOWN (formatting was observed but checkout was not modified)' >>"$GITHUB_STEP_SUMMARY"
+          else
+            echo 'format_status=CLOSED' >>"$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Run semantic audit
+        run: ./scripts/semantic-audit.sh "$GITHUB_WORKSPACE"
+
+      - name: Measure compile stage
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ./scripts/measure-command.sh "$EVIDENCE_ROOT/metrics/compile.json" compile "$EVIDENCE_ROOT/metrics/compile.log" go test -run '^$' ./...
+
+      - name: Measure build stage
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ./scripts/measure-command.sh "$EVIDENCE_ROOT/metrics/build.json" build "$EVIDENCE_ROOT/metrics/build.log" go build -trimpath -o "$EVIDENCE_ROOT/gooo-incremental-release-proof" ./cmd/gooo-incremental-release-proof
+
+      - name: Run Go vet
+        run: go vet ./...
+
+      - name: Measure test stage
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ./scripts/measure-command.sh "$EVIDENCE_ROOT/metrics/test.json" test "$EVIDENCE_ROOT/metrics/test.log" go test -json -count=1 ./...
+
+      - name: Measure fixed conformance stage
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ./scripts/measure-command.sh "$EVIDENCE_ROOT/metrics/conformance.json" conformance "$EVIDENCE_ROOT/metrics/conformance.log" ./scripts/conformance.sh "$GITHUB_WORKSPACE" "$EVIDENCE_ROOT/gooo-incremental-release-proof" "$EVIDENCE_ROOT/conformance"
+
+      - name: Measure generated artifact integration stage
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ./scripts/measure-command.sh "$EVIDENCE_ROOT/metrics/integration.json" integration "$EVIDENCE_ROOT/metrics/integration.log" ./scripts/integration.sh "$GITHUB_WORKSPACE" "$EVIDENCE_ROOT/conformance/cases" "$EVIDENCE_ROOT/integration"
+
+      - name: Assemble exact CI evidence
+        if: always()
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          if [[ -f "$EVIDENCE_ROOT/conformance/cases/conformance.json" ]]; then
+            ./scripts/ci-metrics.sh "$GITHUB_WORKSPACE" "$EVIDENCE_ROOT/ci-metrics.json" "$EVIDENCE_ROOT/conformance/cases/conformance.json" "$EVIDENCE_ROOT/metrics/compile.json" "$EVIDENCE_ROOT/metrics/build.json" "$EVIDENCE_ROOT/metrics/test.json" "$EVIDENCE_ROOT/metrics/conformance.json" "$EVIDENCE_ROOT/metrics/integration.json"
+          else
+            jq -n '{schema:"gooo/incremental-release-proof/ci-evidence/v1",verification_authority:"GITHUB_ACTIONS",status:"UNKNOWN",unknown:{stage:"CI",step:"assemble-ci-evidence",reason:"a required stage did not produce a report",unknown_class:"MISSING_STAGE_EVIDENCE",next_operation:"rerun-github-actions",blocked_by:["stage_report"]}}' >"$EVIDENCE_ROOT/ci-metrics.json"
+          fi
+
+      - name: Validate exact evidence
+        if: always()
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          jq -e '
+            .schema == "gooo/incremental-release-proof/ci-evidence/v1" and
+            .verification_authority == "GITHUB_ACTIONS" and
+            .root_readme_excluded == true and
+            (.inventory.go_files|type) == "number" and (.inventory.gooo_files|type) == "number" and
+            (.inventory.go_physical_lines|type) == "number" and (.inventory.gooo_physical_lines|type) == "number" and
+            (.inventory.descendant_dirs|type) == "number" and (.inventory.regular_files|type) == "number" and
+            (.generated.files|type) == "number" and (.generated.bytes|type) == "number" and
+            (all(.stages[]; (.wall_ms|type) == "number" and (.peak_rss_kib|type) == "number" and .measurement_status == "CLOSED")) and
+            .tests == {total:9,selected:9,executed:7,reused:2,failed:3,unknown:3} and
+            .repository_writes == 0 and .authority.local_verification_executions == 0 and
+            .authority.cross_project_required_gates == 0 and
+            ([.cases[] | select(.decision == "CLOSED") | .improvement.exact_pair] | all)
+          ' "$EVIDENCE_ROOT/ci-metrics.json" >/dev/null
+
+      - name: Publish step summary
+        if: always()
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          if [[ -f "$EVIDENCE_ROOT/conformance/cases/conformance.json" ]]; then
+            jq -r '"decision=\(.decision) cases=\(.summary.total_cases) CLOSED=\(.summary.closed) UNKNOWN=\(.summary.unknown) REFUTED=\(.summary.refuted) tests total/selected/executed/reused/failed/unknown=\(.summary.tests_total)/\(.summary.tests_selected)/\(.summary.tests_executed)/\(.summary.tests_reused)/\(.summary.tests_failed)/\(.summary.tests_unknown)"' "$EVIDENCE_ROOT/conformance/cases/conformance.json" >>"$GITHUB_STEP_SUMMARY"
+          fi
+          if [[ -f "$EVIDENCE_ROOT/ci-metrics.json" ]]; then
+            jq -r '"inventory Go/Gooo files=\(.inventory.go_files)/\(.inventory.gooo_files), generated=\(.generated.files) files/\(.generated.bytes) bytes, repository_writes=\(.repository_writes // null)"' "$EVIDENCE_ROOT/ci-metrics.json" >>"$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload exact CI evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gooo-incremental-release-proof-evidence-${{ github.run_id }}
+          path: ${{ runner.temp }}/gooo-incremental-release-proof
+          if-no-files-found: error
