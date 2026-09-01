@@ -43,13 +43,13 @@ type MetricPolicy struct {
 }
 
 type AuthorityRule struct {
-	RepositoryWrites       int
-	OutputScope            string
-	AutomaticCommit        int
-	AutomaticPush          int
-	AutomaticMerge         int
-	AutomaticRelease       int
-	LocalVerification      string
+	RepositoryWrites       int    `json:"repository_writes"`
+	OutputScope            string `json:"output_scope"`
+	AutomaticCommit        int    `json:"automatic_commit"`
+	AutomaticPush          int    `json:"automatic_push"`
+	AutomaticMerge         int    `json:"automatic_merge"`
+	AutomaticRelease       int    `json:"automatic_release"`
+	LocalVerification      string `json:"local_verification_authority"`
 }
 
 type GenerationPlan struct {
