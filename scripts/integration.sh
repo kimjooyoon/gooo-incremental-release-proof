@@ -12,7 +12,7 @@ mkdir -p "$output_root"
 count=0
 for artifact in "$conformance"/*/generated/release-lock.json; do
   [[ -f "$artifact" ]] || continue
-  case_id=$(basename "$(dirname "$(dirname "$(dirname "$artifact")")")")
+  case_id=$(basename "$(dirname "$(dirname "$artifact")")")
   jq -e --arg id "$case_id" '
     .schema == "gooo/incremental-release-proof/generated-lock/v1" and
     .scenario == $id and

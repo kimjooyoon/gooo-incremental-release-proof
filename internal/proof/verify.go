@@ -105,8 +105,8 @@ func evaluateCase(policy Policy, scenario ScenarioSpec, fixture FixtureCase, par
 		Parent: ParentSummary{CheckpointID: fixture.ParentCheckpointID, Reused: false},
 		RemoteQueries: RemoteQuerySummary{Scope: "parent-checkpoint-plus-new-or-changed-releases-only"},
 	}
-	var unknowns []UnknownRecord
-	var refutations []Refutation
+	unknowns := make([]UnknownRecord, 0)
+	refutations := make([]Refutation, 0)
 	if fixture.ParentCheckpointID == "" || !parentOK {
 		unknowns = append(unknowns, UnknownRecord{
 			Stage: "CHECKPOINT", Step: "load-parent-checkpoint",
