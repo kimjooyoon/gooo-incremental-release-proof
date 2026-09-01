@@ -161,7 +161,7 @@ func parseRecord(policy *Policy, tokens []string, lineNo int) error {
 		if err != nil {
 			return bad(err.Error())
 		}
-		policy.Activities = append(policy.Activities, ActivitySpec{ID: tokens[1], Name: pairs["name"], Proof: pairs["proof"], Artifact: pairs["artifact"], Authority: pairs["authority"]})
+		policy.Activities = append(policy.Activities, ActivitySpec{ID: pairs["id"], Name: pairs["name"], Proof: pairs["proof"], Artifact: pairs["artifact"], Authority: pairs["authority"]})
 	case "rule":
 		pairs, err := pairsAfter(tokens, 1)
 		if err != nil {
