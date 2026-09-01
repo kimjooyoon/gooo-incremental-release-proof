@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func Inventory(root string) Inventory {
+func CollectInventory(root string) Inventory {
 	var result Inventory
 	result.RootReadmeExcluded = true
 	_ = filepath.Walk(root, func(path string, info os.FileInfo, err error) error {

@@ -47,7 +47,7 @@ func RunConformance(options Options) (ConformanceReport, error) {
 		Schema:         "gooo/incremental-release-proof/conformance/v1",
 		ContractDigest: Digest(metaRaw),
 		CorpusDigest:   Digest(corpusRaw),
-		Inventory:      Inventory(options.Root),
+		Inventory:      CollectInventory(options.Root),
 		Authority:      policy.AuthorityRule,
 	}
 	for _, scenario := range policy.Scenarios {
