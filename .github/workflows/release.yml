@@ -1,0 +1,278 @@
+name: gooo incremental release proof release
+
+"on":
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: Exact successful post-main commit to release
+        required: true
+        type: string
+      verification_run_id:
+        description: Successful post-main GitHub Actions run containing the evidence artifact
+        required: true
+        type: string
+      release_version:
+        description: New unused 0.x.y version; failed release state is retained
+        required: true
+        default: 0.1.0
+        type: string
+      operator_policy_receipt_digest:
+        description: One explicit operator immutable-release policy receipt digest
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    env:
+      EXPECTED_SHA: ${{ inputs.expected_sha }}
+      VERIFICATION_RUN_ID: ${{ inputs.verification_run_id }}
+      RELEASE_VERSION: ${{ inputs.release_version }}
+      OPERATOR_POLICY_RECEIPT_DIGEST: ${{ inputs.operator_policy_receipt_digest }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout exact merged main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install Go 1.27
+        uses: actions/setup-go@v6
+        with:
+          go-version: 1.27.0
+          cache: false
+
+      - name: Bind exact verification run and authority receipt
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+          test "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$VERIFICATION_RUN_ID" --jq '.head_sha')" = "$EXPECTED_SHA"
+          test "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$VERIFICATION_RUN_ID" --jq '.head_branch')" = "main"
+          test "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$VERIFICATION_RUN_ID" --jq '.status')" = "completed"
+          test "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$VERIFICATION_RUN_ID" --jq '.conclusion')" = "success"
+          case "$RELEASE_VERSION" in
+            0.*.*) ;;
+            *) echo 'release_version must be 0.x.y' >&2; exit 1 ;;
+          esac
+          case "$OPERATOR_POLICY_RECEIPT_DIGEST" in
+            sha256:*) ;;
+            *) echo 'operator policy receipt digest is required' >&2; exit 1 ;;
+          esac
+          echo "RELEASE_TAG=v$RELEASE_VERSION" >>"$GITHUB_ENV"
+          echo "EVIDENCE_ROOT=$RUNNER_TEMP/gooo-incremental-release-proof-release" >>"$GITHUB_ENV"
+          mkdir -p "$RUNNER_TEMP/gooo-incremental-release-proof-release"
+
+      - name: Resolve verification job and artifact identity
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          jobs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$VERIFICATION_RUN_ID/jobs?per_page=100")
+          job_id=$(jq -r '[.jobs[] | select(.name == "verify") | .id] | if length == 1 then .[0] else empty end' <<<"$jobs")
+          test -n "$job_id"
+          artifact_name="gooo-incremental-release-proof-evidence-$VERIFICATION_RUN_ID"
+          artifacts=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$VERIFICATION_RUN_ID/artifacts?per_page=100")
+          artifact_id=$(jq -r --arg name "$artifact_name" '[.artifacts[] | select(.name == $name and .expired == false) | .id] | if length == 1 then .[0] else empty end' <<<"$artifacts")
+          test -n "$artifact_id"
+          verification_sha=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$VERIFICATION_RUN_ID" --jq '.head_sha')
+          echo "VERIFICATION_JOB_ID=$job_id" >>"$GITHUB_ENV"
+          echo "VERIFICATION_ARTIFACT_ID=$artifact_id" >>"$GITHUB_ENV"
+          echo "VERIFICATION_ARTIFACT_NAME=$artifact_name" >>"$GITHUB_ENV"
+          echo "VERIFICATION_RUN_SHA=$verification_sha" >>"$GITHUB_ENV"
+
+      - name: Refuse tag or published-release reuse
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          if git ls-remote --exit-code --tags origin "refs/tags/$RELEASE_TAG" >/dev/null 2>&1; then
+            release_detail=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG" 2>/dev/null || true)
+            if [[ -z "$release_detail" || "$(jq -r '.draft // false' <<<"$release_detail")" != true ]]; then
+              echo "refusing to reuse existing tag or published release $RELEASE_TAG" >&2
+              exit 1
+            fi
+          else
+            if gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG" >/dev/null 2>&1; then
+              echo "refusing to reuse an existing published release $RELEASE_TAG" >&2
+              exit 1
+            fi
+          fi
+
+      - name: Create annotated tag exactly once
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          if git ls-remote --exit-code --tags origin "refs/tags/$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "retaining existing tag for exact draft recovery"
+          else
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git tag -a "$RELEASE_TAG" "$EXPECTED_SHA" -m "gooo incremental release proof $RELEASE_TAG"
+            git push origin "refs/tags/$RELEASE_TAG"
+          fi
+          tag_ref=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$RELEASE_TAG")
+          test "$(jq -r '.object.type' <<<"$tag_ref")" = tag
+          tag_object_sha=$(jq -r '.object.sha' <<<"$tag_ref")
+          tag_body=$(gh api "repos/$GITHUB_REPOSITORY/git/tags/$tag_object_sha")
+          jq -e --arg expected "$EXPECTED_SHA" '.object.type == "commit" and .object.sha == $expected' <<<"$tag_body" >/dev/null
+          peeled=$(jq -r '.object.sha' <<<"$tag_body")
+          echo "TAG_OBJECT_SHA=$tag_object_sha" >>"$GITHUB_ENV"
+          echo "PEELED_COMMIT_SHA=$peeled" >>"$GITHUB_ENV"
+
+      - name: Create draft release and use create-response ID immediately
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          draft_response_file="$EVIDENCE_ROOT/draft-create-response.json"
+          if draft_response=$(gh api --method POST "repos/$GITHUB_REPOSITORY/releases" \
+            -f "tag_name=$RELEASE_TAG" -f "target_commitish=$EXPECTED_SHA" \
+            -f "name=gooo incremental release proof $RELEASE_TAG" \
+            -f "body=Draft release; source and evidence digests are checked before publication." \
+            -F draft=true); then
+            printf '%s\n' "$draft_response" >"$draft_response_file"
+            draft_id=$(jq -r '.id // empty' <<<"$draft_response")
+            test -n "$draft_id"
+            echo "DRAFT_ID=$draft_id" >>"$GITHUB_ENV"
+            echo "draft_id=$draft_id source=create_response" >>"$GITHUB_STEP_SUMMARY"
+          else
+            echo "create response failed; listing is permitted only for existing draft recovery" >&2
+            release_list=$(gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100")
+            drafts=$(jq --arg tag "$RELEASE_TAG" '[.[] | select(.tag_name == $tag and .draft == true)]' <<<"$release_list")
+            test "$(jq 'length' <<<"$drafts")" = 1
+            draft_id=$(jq -r '.[0].id' <<<"$drafts")
+            test -n "$draft_id"
+            printf '%s\n' "$drafts" >"$EVIDENCE_ROOT/draft-recovery-list.json"
+            echo "DRAFT_ID=$draft_id" >>"$GITHUB_ENV"
+            echo "draft_id=$draft_id source=existing_draft_recovery" >>"$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Resolve draft and strip upload URL template
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          draft_detail=$(gh api "repos/$GITHUB_REPOSITORY/releases/$DRAFT_ID")
+          jq -e --arg tag "$RELEASE_TAG" '.id != null and .tag_name == $tag and .draft == true' <<<"$draft_detail" >/dev/null
+          upload_url=$(jq -r '.upload_url // empty' <<<"$draft_detail")
+          upload_url="${upload_url%%\{*}"
+          case "$upload_url" in
+            https://uploads.github.com/*) ;;
+            *) echo 'draft upload_url is not an uploads.github.com URL' >&2; exit 1 ;;
+          esac
+          test "$upload_url" != *'{'*
+          echo "UPLOAD_URL=$upload_url" >>"$GITHUB_ENV"
+
+      - name: Download exact post-main evidence artifact and build source/evidence assets
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          verification_dir="$EVIDENCE_ROOT/verification-artifact"
+          release_dir="$EVIDENCE_ROOT/release-assets"
+          mkdir -p "$verification_dir" "$release_dir"
+          gh run download "$VERIFICATION_RUN_ID" --name "$VERIFICATION_ARTIFACT_NAME" --dir "$verification_dir"
+          test -f "$verification_dir/ci-metrics.json"
+          test -f "$verification_dir/conformance/cases/conformance.json"
+          git archive --format=tar.gz --prefix="gooo-incremental-release-proof-$RELEASE_TAG/" "$EXPECTED_SHA" >"$release_dir/gooo-incremental-release-proof-source-$RELEASE_TAG.tar.gz"
+          tar -czf "$release_dir/gooo-incremental-release-proof-ci-evidence-$RELEASE_TAG.tar.gz" -C "$verification_dir" .
+          (cd "$release_dir" && sha256sum *.tar.gz >SHA256SUMS)
+
+      - name: Upload source and evidence assets to the draft
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          release_dir="$EVIDENCE_ROOT/release-assets"
+          source_name="gooo-incremental-release-proof-source-$RELEASE_TAG.tar.gz"
+          evidence_name="gooo-incremental-release-proof-ci-evidence-$RELEASE_TAG.tar.gz"
+          desired=$(jq -S -n \
+            --arg sn "$source_name" --arg ss "$(stat -c '%s' "$release_dir/$source_name")" --arg sd "sha256:$(sha256sum "$release_dir/$source_name" | awk '{print $1}')" \
+            --arg en "$evidence_name" --arg es "$(stat -c '%s' "$release_dir/$evidence_name")" --arg ed "sha256:$(sha256sum "$release_dir/$evidence_name" | awk '{print $1}')" \
+            '[{name:$sn,size:($ss|tonumber),digest:$sd},{name:$en,size:($es|tonumber),digest:$ed}]')
+          existing=$(gh api "repos/$GITHUB_REPOSITORY/releases/$DRAFT_ID/assets?per_page=100")
+          normalized=$(jq -S --arg sn "$source_name" --arg en "$evidence_name" '[.[] | select(.name == $sn or .name == $en) | {name,size,digest}] | sort_by(.name)' <<<"$existing")
+          if [[ "$normalized" == "[]" ]]; then
+            for asset in "$source_name" "$evidence_name"; do
+              gh api --method POST -H 'Content-Type: application/octet-stream' --input "$release_dir/$asset" "$UPLOAD_URL?name=$asset" >/dev/null
+            done
+          else
+            jq -e --argjson desired "$desired" 'map({name,size,digest}) | sort_by(.name) == ($desired | sort_by(.name))' <<<"$existing" >/dev/null
+          fi
+          existing=$(gh api "repos/$GITHUB_REPOSITORY/releases/$DRAFT_ID/assets?per_page=100")
+          jq -e --argjson desired "$desired" 'map({name,size,digest}) | sort_by(.name) == ($desired | sort_by(.name))' <<<"$existing" >"$EVIDENCE_ROOT/source-evidence-assets.json"
+
+      - name: Assemble and upload the proof-preserving lock asset
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          release_dir="$EVIDENCE_ROOT/release-assets"
+          source_name="gooo-incremental-release-proof-source-$RELEASE_TAG.tar.gz"
+          evidence_name="gooo-incremental-release-proof-ci-evidence-$RELEASE_TAG.tar.gz"
+          assets=$(gh api "repos/$GITHUB_REPOSITORY/releases/$DRAFT_ID/assets?per_page=100")
+          source=$(jq --arg name "$source_name" '.[] | select(.name == $name)' <<<"$assets")
+          evidence=$(jq --arg name "$evidence_name" '.[] | select(.name == $name)' <<<"$assets")
+          source_id=$(jq -r '.id' <<<"$source")
+          evidence_id=$(jq -r '.id' <<<"$evidence")
+          source_size=$(jq -r '.size' <<<"$source")
+          evidence_size=$(jq -r '.size' <<<"$evidence")
+          source_digest=$(jq -r '.digest' <<<"$source")
+          evidence_digest=$(jq -r '.digest' <<<"$evidence")
+          test "$source_digest" != null
+          test "$evidence_digest" != null
+          lock_name="gooo-incremental-release-proof-lock-$RELEASE_TAG.json"
+          unit=$'\037'
+          canonical="$DRAFT_ID${unit}$GITHUB_REPOSITORY${unit}$RELEASE_TAG${unit}$TAG_OBJECT_SHA${unit}$PEELED_COMMIT_SHA${unit}$VERIFICATION_RUN_ID${unit}$VERIFICATION_RUN_SHA${unit}$VERIFICATION_JOB_ID${unit}$VERIFICATION_ARTIFACT_ID${unit}$VERIFICATION_ARTIFACT_NAME${unit}$source_id${unit}$source_name${unit}$source_size${unit}$source_digest${unit}$evidence_id${unit}$evidence_name${unit}$evidence_size${unit}$evidence_digest"
+          merkle="sha256:$(printf 'leaf\0%s' "$canonical" | sha256sum | awk '{print $1}')"
+          release_ids=$(jq -cn --argjson id "$DRAFT_ID" '[$id]')
+          lock_preimage=$(jq -cn --arg schema "gooo/incremental-release-proof/checkpoint/v1" --arg id "release-$RELEASE_TAG" --arg previous "sha256:genesis" --arg merkle "$merkle" --argjson release_ids "$release_ids" '{schema:$schema,checkpoint_id:$id,previous_root_digest:$previous,merkle_root_digest:$merkle,release_ids:$release_ids}')
+          lock_root="sha256:$(printf '%s' "$lock_preimage" | sha256sum | awk '{print $1}')"
+          record=$(jq -cn --argjson id "$DRAFT_ID" --arg repository "$GITHUB_REPOSITORY" --arg tag "$RELEASE_TAG" --arg tag_object "$TAG_OBJECT_SHA" --arg peeled "$PEELED_COMMIT_SHA" --argjson run_id "$VERIFICATION_RUN_ID" --arg run_sha "$VERIFICATION_RUN_SHA" --argjson job_id "$VERIFICATION_JOB_ID" --argjson artifact_id "$VERIFICATION_ARTIFACT_ID" --arg artifact_name "$VERIFICATION_ARTIFACT_NAME" --argjson source_id "$source_id" --arg source_name "$source_name" --argjson source_size "$source_size" --arg source_digest "$source_digest" --argjson evidence_id "$evidence_id" --arg evidence_name "$evidence_name" --argjson evidence_size "$evidence_size" --arg evidence_digest "$evidence_digest" '{immutable_release_id:$id,repository:$repository,tag:$tag,annotated_tag_object_sha:$tag_object,peeled_commit_sha:$peeled,ci:{run_id:$run_id,run_sha:$run_sha,job_id:$job_id,artifact_id:$artifact_id,artifact_name:$artifact_name},source_asset:{id:$source_id,name:$source_name,size:$source_size,digest:$source_digest},evidence_asset:{id:$evidence_id,name:$evidence_name,size:$evidence_size,digest:$evidence_digest}}')
+          checkpoint=$(jq -cn --arg id "release-$RELEASE_TAG" --arg previous "sha256:genesis" --arg merkle "$merkle" --arg lock "$lock_root" --argjson record "$record" '{schema:"gooo/incremental-release-proof/checkpoint/v1",checkpoint_id:$id,previous_root_digest:$previous,releases:[$record],merkle_root_digest:$merkle,lock_root_digest:$lock}')
+          jq -S -n --arg schema "gooo/incremental-release-proof/release-lock-asset/v1" --arg contract "sha256:$(sha256sum .gooo/incremental-release-proof.gooo | awk '{print $1}')" --arg decision "CLOSED" --arg operator "$OPERATOR_POLICY_RECEIPT_DIGEST" --argjson checkpoint "$checkpoint" --argjson source "$source" --argjson evidence "$evidence" --argjson run "$VERIFICATION_RUN_ID" --argjson job "$VERIFICATION_JOB_ID" --argjson artifact "$VERIFICATION_ARTIFACT_ID" '{schema:$schema,decision:$decision,contract_digest:$contract,checkpoint:$checkpoint,verification:{run_id:$run,job_id:$job,artifact_id:$artifact},operator_immutable_policy_receipt_digest:$operator,authority:{repository_writes:0,local_verification_executions:0,github_actions_token:"github.token"},assets:{source:$source,evidence:$evidence}}' >"$release_dir/$lock_name"
+          if [[ -n "$(jq -r --arg name "$lock_name" '.[] | select(.name == $name) | .id' <<<"$assets")" ]]; then
+            echo "retaining existing lock asset; exact digest comparison follows"
+          else
+            gh api --method POST -H 'Content-Type: application/json' --input "$release_dir/$lock_name" "$UPLOAD_URL?name=$lock_name" >/dev/null
+          fi
+          all_assets=$(gh api "repos/$GITHUB_REPOSITORY/releases/$DRAFT_ID/assets?per_page=100")
+          jq -e --arg name "$lock_name" --arg digest "sha256:$(sha256sum "$release_dir/$lock_name" | awk '{print $1}')" '[.[] | select(.name == $name and .digest == $digest)] | length == 1' <<<"$all_assets" >/dev/null
+          jq -S -n --arg tag "$RELEASE_TAG" --arg commit "$EXPECTED_SHA" --arg tag_object "$TAG_OBJECT_SHA" --arg peeled "$PEELED_COMMIT_SHA" --arg lock_name "$lock_name" --arg lock_digest "sha256:$(sha256sum "$release_dir/$lock_name" | awk '{print $1}')" --argjson lock_id "$(jq -r --arg name "$lock_name" '.[] | select(.name == $name) | .id' <<<"$all_assets")" --argjson lock_size "$(jq -r --arg name "$lock_name" '.[] | select(.name == $name) | .size' <<<"$all_assets")" --argjson assets "$all_assets" '{schema:"gooo/incremental-release-proof/release-manifest/v1",tag:$tag,commit_sha:$commit,annotated_tag_object_sha:$tag_object,peeled_commit_sha:$peeled,lock_asset:{id:$lock_id,name:$lock_name,size:$lock_size,digest:$lock_digest},assets:$assets,immutable:true,authority:{repository_writes:0,local_verification_executions:0,github_actions_token:"github.token"}}' >"$release_dir/release-manifest.json"
+          (cd "$release_dir" && sha256sum "$lock_name" >>SHA256SUMS)
+          echo "RELEASE_DIR=$release_dir" >>"$GITHUB_ENV"
+          echo "LOCK_NAME=$lock_name" >>"$GITHUB_ENV"
+
+      - name: Publish draft only after every asset digest is complete
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          assets=$(gh api "repos/$GITHUB_REPOSITORY/releases/$DRAFT_ID/assets?per_page=100")
+          test "$(jq 'length' <<<"$assets")" = 3
+          gh api --method PATCH -F draft=false "repos/$GITHUB_REPOSITORY/releases/$DRAFT_ID" >/dev/null
+
+      - name: Verify public immutable release, tag, checkpoint, and asset digests
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          release_json=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG")
+          jq -e --arg tag "$RELEASE_TAG" --arg commit "$EXPECTED_SHA" '.draft == false and .prerelease == false and .immutable == true and .tag_name == $tag and (.assets|length) == 3' <<<"$release_json" >/dev/null
+          tag_ref=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$RELEASE_TAG")
+          test "$(jq -r '.object.type' <<<"$tag_ref")" = tag
+          test "$(jq -r '.object.sha' <<<"$tag_ref")" = "$TAG_OBJECT_SHA"
+          jq -e --arg commit "$EXPECTED_SHA" '.object.type == "commit" and .object.sha == $commit' <(gh api "repos/$GITHUB_REPOSITORY/git/tags/$TAG_OBJECT_SHA") >/dev/null
+          while read -r digest path; do
+            name=$(basename "$path")
+            remote=$(jq -r --arg name "$name" '.assets[] | select(.name == $name) | .digest' <<<"$release_json")
+            test "$remote" = "sha256:$digest"
+          done <"$RELEASE_DIR/SHA256SUMS"
+          jq -r '"release_id=\(.id) immutable=\(.immutable) assets=\(.assets|length) tag=\(.tag_name)"' <<<"$release_json" >>"$GITHUB_STEP_SUMMARY"
+          jq -r '"lock_asset=\(.lock_asset.name) size=\(.lock_asset.size) digest=\(.lock_asset.digest)"' "$RELEASE_DIR/release-manifest.json" >>"$GITHUB_STEP_SUMMARY"
+
+      - name: Upload retained release evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gooo-incremental-release-proof-release-evidence-${{ github.run_id }}
+          path: ${{ runner.temp }}/gooo-incremental-release-proof-release
+          if-no-files-found: error

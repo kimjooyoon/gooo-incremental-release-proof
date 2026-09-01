@@ -1,0 +1,3206 @@
+{
+  "schema": "gooo/incremental-release-proof/corpus/v1",
+  "corpus_id": "incremental-release-proof-v1",
+  "checkpoints": {
+    "parent-48": {
+      "schema": "gooo/incremental-release-proof/checkpoint/v1",
+      "checkpoint_id": "parent-48",
+      "previous_root_digest": "sha256:genesis",
+      "releases": [
+        {
+          "immutable_release_id": 380001,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.1",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003e9",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d1",
+          "ci": {
+            "run_id": 700001,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bb9",
+            "job_id": 800001,
+            "artifact_id": 900001,
+            "artifact_name": "gooo-upstream-evidence-v0.1.1.json"
+          },
+          "source_asset": {
+            "id": 1000001,
+            "name": "source-v0.1.1.tar.gz",
+            "size": 10001,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa1"
+          },
+          "evidence_asset": {
+            "id": 1100001,
+            "name": "evidence-v0.1.1.tar.gz",
+            "size": 20001,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001389"
+          }
+        },
+        {
+          "immutable_release_id": 380002,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.2",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ea",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d2",
+          "ci": {
+            "run_id": 700002,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bba",
+            "job_id": 800002,
+            "artifact_id": 900002,
+            "artifact_name": "gooo-upstream-evidence-v0.1.2.json"
+          },
+          "source_asset": {
+            "id": 1000002,
+            "name": "source-v0.1.2.tar.gz",
+            "size": 10002,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa2"
+          },
+          "evidence_asset": {
+            "id": 1100002,
+            "name": "evidence-v0.1.2.tar.gz",
+            "size": 20002,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138a"
+          }
+        },
+        {
+          "immutable_release_id": 380003,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.3",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003eb",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d3",
+          "ci": {
+            "run_id": 700003,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbb",
+            "job_id": 800003,
+            "artifact_id": 900003,
+            "artifact_name": "gooo-upstream-evidence-v0.1.3.json"
+          },
+          "source_asset": {
+            "id": 1000003,
+            "name": "source-v0.1.3.tar.gz",
+            "size": 10003,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa3"
+          },
+          "evidence_asset": {
+            "id": 1100003,
+            "name": "evidence-v0.1.3.tar.gz",
+            "size": 20003,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138b"
+          }
+        },
+        {
+          "immutable_release_id": 380004,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.4",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ec",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d4",
+          "ci": {
+            "run_id": 700004,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbc",
+            "job_id": 800004,
+            "artifact_id": 900004,
+            "artifact_name": "gooo-upstream-evidence-v0.1.4.json"
+          },
+          "source_asset": {
+            "id": 1000004,
+            "name": "source-v0.1.4.tar.gz",
+            "size": 10004,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa4"
+          },
+          "evidence_asset": {
+            "id": 1100004,
+            "name": "evidence-v0.1.4.tar.gz",
+            "size": 20004,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138c"
+          }
+        },
+        {
+          "immutable_release_id": 380005,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.5",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ed",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d5",
+          "ci": {
+            "run_id": 700005,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbd",
+            "job_id": 800005,
+            "artifact_id": 900005,
+            "artifact_name": "gooo-upstream-evidence-v0.1.5.json"
+          },
+          "source_asset": {
+            "id": 1000005,
+            "name": "source-v0.1.5.tar.gz",
+            "size": 10005,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa5"
+          },
+          "evidence_asset": {
+            "id": 1100005,
+            "name": "evidence-v0.1.5.tar.gz",
+            "size": 20005,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138d"
+          }
+        },
+        {
+          "immutable_release_id": 380006,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.6",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ee",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d6",
+          "ci": {
+            "run_id": 700006,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbe",
+            "job_id": 800006,
+            "artifact_id": 900006,
+            "artifact_name": "gooo-upstream-evidence-v0.1.6.json"
+          },
+          "source_asset": {
+            "id": 1000006,
+            "name": "source-v0.1.6.tar.gz",
+            "size": 10006,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa6"
+          },
+          "evidence_asset": {
+            "id": 1100006,
+            "name": "evidence-v0.1.6.tar.gz",
+            "size": 20006,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138e"
+          }
+        },
+        {
+          "immutable_release_id": 380007,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.7",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ef",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d7",
+          "ci": {
+            "run_id": 700007,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbf",
+            "job_id": 800007,
+            "artifact_id": 900007,
+            "artifact_name": "gooo-upstream-evidence-v0.1.7.json"
+          },
+          "source_asset": {
+            "id": 1000007,
+            "name": "source-v0.1.7.tar.gz",
+            "size": 10007,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa7"
+          },
+          "evidence_asset": {
+            "id": 1100007,
+            "name": "evidence-v0.1.7.tar.gz",
+            "size": 20007,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138f"
+          }
+        },
+        {
+          "immutable_release_id": 380008,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.8",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f0",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d8",
+          "ci": {
+            "run_id": 700008,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc0",
+            "job_id": 800008,
+            "artifact_id": 900008,
+            "artifact_name": "gooo-upstream-evidence-v0.1.8.json"
+          },
+          "source_asset": {
+            "id": 1000008,
+            "name": "source-v0.1.8.tar.gz",
+            "size": 10008,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa8"
+          },
+          "evidence_asset": {
+            "id": 1100008,
+            "name": "evidence-v0.1.8.tar.gz",
+            "size": 20008,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001390"
+          }
+        },
+        {
+          "immutable_release_id": 380009,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.9",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f1",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d9",
+          "ci": {
+            "run_id": 700009,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc1",
+            "job_id": 800009,
+            "artifact_id": 900009,
+            "artifact_name": "gooo-upstream-evidence-v0.1.9.json"
+          },
+          "source_asset": {
+            "id": 1000009,
+            "name": "source-v0.1.9.tar.gz",
+            "size": 10009,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa9"
+          },
+          "evidence_asset": {
+            "id": 1100009,
+            "name": "evidence-v0.1.9.tar.gz",
+            "size": 20009,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001391"
+          }
+        },
+        {
+          "immutable_release_id": 380010,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.10",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f2",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007da",
+          "ci": {
+            "run_id": 700010,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc2",
+            "job_id": 800010,
+            "artifact_id": 900010,
+            "artifact_name": "gooo-upstream-evidence-v0.1.10.json"
+          },
+          "source_asset": {
+            "id": 1000010,
+            "name": "source-v0.1.10.tar.gz",
+            "size": 10010,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000faa"
+          },
+          "evidence_asset": {
+            "id": 1100010,
+            "name": "evidence-v0.1.10.tar.gz",
+            "size": 20010,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001392"
+          }
+        },
+        {
+          "immutable_release_id": 380011,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.11",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f3",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007db",
+          "ci": {
+            "run_id": 700011,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc3",
+            "job_id": 800011,
+            "artifact_id": 900011,
+            "artifact_name": "gooo-upstream-evidence-v0.1.11.json"
+          },
+          "source_asset": {
+            "id": 1000011,
+            "name": "source-v0.1.11.tar.gz",
+            "size": 10011,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fab"
+          },
+          "evidence_asset": {
+            "id": 1100011,
+            "name": "evidence-v0.1.11.tar.gz",
+            "size": 20011,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001393"
+          }
+        },
+        {
+          "immutable_release_id": 380012,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.12",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f4",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007dc",
+          "ci": {
+            "run_id": 700012,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc4",
+            "job_id": 800012,
+            "artifact_id": 900012,
+            "artifact_name": "gooo-upstream-evidence-v0.1.12.json"
+          },
+          "source_asset": {
+            "id": 1000012,
+            "name": "source-v0.1.12.tar.gz",
+            "size": 10012,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fac"
+          },
+          "evidence_asset": {
+            "id": 1100012,
+            "name": "evidence-v0.1.12.tar.gz",
+            "size": 20012,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001394"
+          }
+        },
+        {
+          "immutable_release_id": 380013,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.13",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f5",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007dd",
+          "ci": {
+            "run_id": 700013,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc5",
+            "job_id": 800013,
+            "artifact_id": 900013,
+            "artifact_name": "gooo-upstream-evidence-v0.1.13.json"
+          },
+          "source_asset": {
+            "id": 1000013,
+            "name": "source-v0.1.13.tar.gz",
+            "size": 10013,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fad"
+          },
+          "evidence_asset": {
+            "id": 1100013,
+            "name": "evidence-v0.1.13.tar.gz",
+            "size": 20013,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001395"
+          }
+        },
+        {
+          "immutable_release_id": 380014,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.14",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f6",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007de",
+          "ci": {
+            "run_id": 700014,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc6",
+            "job_id": 800014,
+            "artifact_id": 900014,
+            "artifact_name": "gooo-upstream-evidence-v0.1.14.json"
+          },
+          "source_asset": {
+            "id": 1000014,
+            "name": "source-v0.1.14.tar.gz",
+            "size": 10014,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fae"
+          },
+          "evidence_asset": {
+            "id": 1100014,
+            "name": "evidence-v0.1.14.tar.gz",
+            "size": 20014,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001396"
+          }
+        },
+        {
+          "immutable_release_id": 380015,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.15",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f7",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007df",
+          "ci": {
+            "run_id": 700015,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc7",
+            "job_id": 800015,
+            "artifact_id": 900015,
+            "artifact_name": "gooo-upstream-evidence-v0.1.15.json"
+          },
+          "source_asset": {
+            "id": 1000015,
+            "name": "source-v0.1.15.tar.gz",
+            "size": 10015,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000faf"
+          },
+          "evidence_asset": {
+            "id": 1100015,
+            "name": "evidence-v0.1.15.tar.gz",
+            "size": 20015,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001397"
+          }
+        },
+        {
+          "immutable_release_id": 380016,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.16",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f8",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e0",
+          "ci": {
+            "run_id": 700016,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc8",
+            "job_id": 800016,
+            "artifact_id": 900016,
+            "artifact_name": "gooo-upstream-evidence-v0.1.16.json"
+          },
+          "source_asset": {
+            "id": 1000016,
+            "name": "source-v0.1.16.tar.gz",
+            "size": 10016,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb0"
+          },
+          "evidence_asset": {
+            "id": 1100016,
+            "name": "evidence-v0.1.16.tar.gz",
+            "size": 20016,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001398"
+          }
+        },
+        {
+          "immutable_release_id": 380017,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.17",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f9",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e1",
+          "ci": {
+            "run_id": 700017,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc9",
+            "job_id": 800017,
+            "artifact_id": 900017,
+            "artifact_name": "gooo-upstream-evidence-v0.1.17.json"
+          },
+          "source_asset": {
+            "id": 1000017,
+            "name": "source-v0.1.17.tar.gz",
+            "size": 10017,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb1"
+          },
+          "evidence_asset": {
+            "id": 1100017,
+            "name": "evidence-v0.1.17.tar.gz",
+            "size": 20017,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001399"
+          }
+        },
+        {
+          "immutable_release_id": 380018,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.18",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fa",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e2",
+          "ci": {
+            "run_id": 700018,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bca",
+            "job_id": 800018,
+            "artifact_id": 900018,
+            "artifact_name": "gooo-upstream-evidence-v0.1.18.json"
+          },
+          "source_asset": {
+            "id": 1000018,
+            "name": "source-v0.1.18.tar.gz",
+            "size": 10018,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb2"
+          },
+          "evidence_asset": {
+            "id": 1100018,
+            "name": "evidence-v0.1.18.tar.gz",
+            "size": 20018,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139a"
+          }
+        },
+        {
+          "immutable_release_id": 380019,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.19",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fb",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e3",
+          "ci": {
+            "run_id": 700019,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bcb",
+            "job_id": 800019,
+            "artifact_id": 900019,
+            "artifact_name": "gooo-upstream-evidence-v0.1.19.json"
+          },
+          "source_asset": {
+            "id": 1000019,
+            "name": "source-v0.1.19.tar.gz",
+            "size": 10019,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb3"
+          },
+          "evidence_asset": {
+            "id": 1100019,
+            "name": "evidence-v0.1.19.tar.gz",
+            "size": 20019,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139b"
+          }
+        },
+        {
+          "immutable_release_id": 380020,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.20",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fc",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e4",
+          "ci": {
+            "run_id": 700020,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bcc",
+            "job_id": 800020,
+            "artifact_id": 900020,
+            "artifact_name": "gooo-upstream-evidence-v0.1.20.json"
+          },
+          "source_asset": {
+            "id": 1000020,
+            "name": "source-v0.1.20.tar.gz",
+            "size": 10020,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb4"
+          },
+          "evidence_asset": {
+            "id": 1100020,
+            "name": "evidence-v0.1.20.tar.gz",
+            "size": 20020,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139c"
+          }
+        },
+        {
+          "immutable_release_id": 380021,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.21",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fd",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e5",
+          "ci": {
+            "run_id": 700021,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bcd",
+            "job_id": 800021,
+            "artifact_id": 900021,
+            "artifact_name": "gooo-upstream-evidence-v0.1.21.json"
+          },
+          "source_asset": {
+            "id": 1000021,
+            "name": "source-v0.1.21.tar.gz",
+            "size": 10021,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb5"
+          },
+          "evidence_asset": {
+            "id": 1100021,
+            "name": "evidence-v0.1.21.tar.gz",
+            "size": 20021,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139d"
+          }
+        },
+        {
+          "immutable_release_id": 380022,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.22",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fe",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e6",
+          "ci": {
+            "run_id": 700022,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bce",
+            "job_id": 800022,
+            "artifact_id": 900022,
+            "artifact_name": "gooo-upstream-evidence-v0.1.22.json"
+          },
+          "source_asset": {
+            "id": 1000022,
+            "name": "source-v0.1.22.tar.gz",
+            "size": 10022,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb6"
+          },
+          "evidence_asset": {
+            "id": 1100022,
+            "name": "evidence-v0.1.22.tar.gz",
+            "size": 20022,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139e"
+          }
+        },
+        {
+          "immutable_release_id": 380023,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.23",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ff",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e7",
+          "ci": {
+            "run_id": 700023,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bcf",
+            "job_id": 800023,
+            "artifact_id": 900023,
+            "artifact_name": "gooo-upstream-evidence-v0.1.23.json"
+          },
+          "source_asset": {
+            "id": 1000023,
+            "name": "source-v0.1.23.tar.gz",
+            "size": 10023,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb7"
+          },
+          "evidence_asset": {
+            "id": 1100023,
+            "name": "evidence-v0.1.23.tar.gz",
+            "size": 20023,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139f"
+          }
+        },
+        {
+          "immutable_release_id": 380024,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.24",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000400",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e8",
+          "ci": {
+            "run_id": 700024,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd0",
+            "job_id": 800024,
+            "artifact_id": 900024,
+            "artifact_name": "gooo-upstream-evidence-v0.1.24.json"
+          },
+          "source_asset": {
+            "id": 1000024,
+            "name": "source-v0.1.24.tar.gz",
+            "size": 10024,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb8"
+          },
+          "evidence_asset": {
+            "id": 1100024,
+            "name": "evidence-v0.1.24.tar.gz",
+            "size": 20024,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a0"
+          }
+        },
+        {
+          "immutable_release_id": 380025,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.25",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000401",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e9",
+          "ci": {
+            "run_id": 700025,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd1",
+            "job_id": 800025,
+            "artifact_id": 900025,
+            "artifact_name": "gooo-upstream-evidence-v0.1.25.json"
+          },
+          "source_asset": {
+            "id": 1000025,
+            "name": "source-v0.1.25.tar.gz",
+            "size": 10025,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb9"
+          },
+          "evidence_asset": {
+            "id": 1100025,
+            "name": "evidence-v0.1.25.tar.gz",
+            "size": 20025,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a1"
+          }
+        },
+        {
+          "immutable_release_id": 380026,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.26",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000402",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ea",
+          "ci": {
+            "run_id": 700026,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd2",
+            "job_id": 800026,
+            "artifact_id": 900026,
+            "artifact_name": "gooo-upstream-evidence-v0.1.26.json"
+          },
+          "source_asset": {
+            "id": 1000026,
+            "name": "source-v0.1.26.tar.gz",
+            "size": 10026,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fba"
+          },
+          "evidence_asset": {
+            "id": 1100026,
+            "name": "evidence-v0.1.26.tar.gz",
+            "size": 20026,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a2"
+          }
+        },
+        {
+          "immutable_release_id": 380027,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.27",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000403",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007eb",
+          "ci": {
+            "run_id": 700027,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd3",
+            "job_id": 800027,
+            "artifact_id": 900027,
+            "artifact_name": "gooo-upstream-evidence-v0.1.27.json"
+          },
+          "source_asset": {
+            "id": 1000027,
+            "name": "source-v0.1.27.tar.gz",
+            "size": 10027,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbb"
+          },
+          "evidence_asset": {
+            "id": 1100027,
+            "name": "evidence-v0.1.27.tar.gz",
+            "size": 20027,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a3"
+          }
+        },
+        {
+          "immutable_release_id": 380028,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.28",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000404",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ec",
+          "ci": {
+            "run_id": 700028,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd4",
+            "job_id": 800028,
+            "artifact_id": 900028,
+            "artifact_name": "gooo-upstream-evidence-v0.1.28.json"
+          },
+          "source_asset": {
+            "id": 1000028,
+            "name": "source-v0.1.28.tar.gz",
+            "size": 10028,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbc"
+          },
+          "evidence_asset": {
+            "id": 1100028,
+            "name": "evidence-v0.1.28.tar.gz",
+            "size": 20028,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a4"
+          }
+        },
+        {
+          "immutable_release_id": 380029,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.29",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000405",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ed",
+          "ci": {
+            "run_id": 700029,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd5",
+            "job_id": 800029,
+            "artifact_id": 900029,
+            "artifact_name": "gooo-upstream-evidence-v0.1.29.json"
+          },
+          "source_asset": {
+            "id": 1000029,
+            "name": "source-v0.1.29.tar.gz",
+            "size": 10029,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbd"
+          },
+          "evidence_asset": {
+            "id": 1100029,
+            "name": "evidence-v0.1.29.tar.gz",
+            "size": 20029,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a5"
+          }
+        },
+        {
+          "immutable_release_id": 380030,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.30",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000406",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ee",
+          "ci": {
+            "run_id": 700030,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd6",
+            "job_id": 800030,
+            "artifact_id": 900030,
+            "artifact_name": "gooo-upstream-evidence-v0.1.30.json"
+          },
+          "source_asset": {
+            "id": 1000030,
+            "name": "source-v0.1.30.tar.gz",
+            "size": 10030,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbe"
+          },
+          "evidence_asset": {
+            "id": 1100030,
+            "name": "evidence-v0.1.30.tar.gz",
+            "size": 20030,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a6"
+          }
+        },
+        {
+          "immutable_release_id": 380031,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.31",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000407",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ef",
+          "ci": {
+            "run_id": 700031,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd7",
+            "job_id": 800031,
+            "artifact_id": 900031,
+            "artifact_name": "gooo-upstream-evidence-v0.1.31.json"
+          },
+          "source_asset": {
+            "id": 1000031,
+            "name": "source-v0.1.31.tar.gz",
+            "size": 10031,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbf"
+          },
+          "evidence_asset": {
+            "id": 1100031,
+            "name": "evidence-v0.1.31.tar.gz",
+            "size": 20031,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a7"
+          }
+        },
+        {
+          "immutable_release_id": 380032,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.32",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000408",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f0",
+          "ci": {
+            "run_id": 700032,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd8",
+            "job_id": 800032,
+            "artifact_id": 900032,
+            "artifact_name": "gooo-upstream-evidence-v0.1.32.json"
+          },
+          "source_asset": {
+            "id": 1000032,
+            "name": "source-v0.1.32.tar.gz",
+            "size": 10032,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc0"
+          },
+          "evidence_asset": {
+            "id": 1100032,
+            "name": "evidence-v0.1.32.tar.gz",
+            "size": 20032,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a8"
+          }
+        },
+        {
+          "immutable_release_id": 380033,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.33",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000409",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f1",
+          "ci": {
+            "run_id": 700033,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd9",
+            "job_id": 800033,
+            "artifact_id": 900033,
+            "artifact_name": "gooo-upstream-evidence-v0.1.33.json"
+          },
+          "source_asset": {
+            "id": 1000033,
+            "name": "source-v0.1.33.tar.gz",
+            "size": 10033,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc1"
+          },
+          "evidence_asset": {
+            "id": 1100033,
+            "name": "evidence-v0.1.33.tar.gz",
+            "size": 20033,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a9"
+          }
+        },
+        {
+          "immutable_release_id": 380034,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.34",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040a",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f2",
+          "ci": {
+            "run_id": 700034,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bda",
+            "job_id": 800034,
+            "artifact_id": 900034,
+            "artifact_name": "gooo-upstream-evidence-v0.1.34.json"
+          },
+          "source_asset": {
+            "id": 1000034,
+            "name": "source-v0.1.34.tar.gz",
+            "size": 10034,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc2"
+          },
+          "evidence_asset": {
+            "id": 1100034,
+            "name": "evidence-v0.1.34.tar.gz",
+            "size": 20034,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013aa"
+          }
+        },
+        {
+          "immutable_release_id": 380035,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.35",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040b",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f3",
+          "ci": {
+            "run_id": 700035,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bdb",
+            "job_id": 800035,
+            "artifact_id": 900035,
+            "artifact_name": "gooo-upstream-evidence-v0.1.35.json"
+          },
+          "source_asset": {
+            "id": 1000035,
+            "name": "source-v0.1.35.tar.gz",
+            "size": 10035,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc3"
+          },
+          "evidence_asset": {
+            "id": 1100035,
+            "name": "evidence-v0.1.35.tar.gz",
+            "size": 20035,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ab"
+          }
+        },
+        {
+          "immutable_release_id": 380036,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.36",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040c",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f4",
+          "ci": {
+            "run_id": 700036,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bdc",
+            "job_id": 800036,
+            "artifact_id": 900036,
+            "artifact_name": "gooo-upstream-evidence-v0.1.36.json"
+          },
+          "source_asset": {
+            "id": 1000036,
+            "name": "source-v0.1.36.tar.gz",
+            "size": 10036,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc4"
+          },
+          "evidence_asset": {
+            "id": 1100036,
+            "name": "evidence-v0.1.36.tar.gz",
+            "size": 20036,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ac"
+          }
+        },
+        {
+          "immutable_release_id": 380037,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.37",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040d",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f5",
+          "ci": {
+            "run_id": 700037,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bdd",
+            "job_id": 800037,
+            "artifact_id": 900037,
+            "artifact_name": "gooo-upstream-evidence-v0.1.37.json"
+          },
+          "source_asset": {
+            "id": 1000037,
+            "name": "source-v0.1.37.tar.gz",
+            "size": 10037,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc5"
+          },
+          "evidence_asset": {
+            "id": 1100037,
+            "name": "evidence-v0.1.37.tar.gz",
+            "size": 20037,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ad"
+          }
+        },
+        {
+          "immutable_release_id": 380038,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.38",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040e",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f6",
+          "ci": {
+            "run_id": 700038,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bde",
+            "job_id": 800038,
+            "artifact_id": 900038,
+            "artifact_name": "gooo-upstream-evidence-v0.1.38.json"
+          },
+          "source_asset": {
+            "id": 1000038,
+            "name": "source-v0.1.38.tar.gz",
+            "size": 10038,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc6"
+          },
+          "evidence_asset": {
+            "id": 1100038,
+            "name": "evidence-v0.1.38.tar.gz",
+            "size": 20038,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ae"
+          }
+        },
+        {
+          "immutable_release_id": 380039,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.39",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040f",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f7",
+          "ci": {
+            "run_id": 700039,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bdf",
+            "job_id": 800039,
+            "artifact_id": 900039,
+            "artifact_name": "gooo-upstream-evidence-v0.1.39.json"
+          },
+          "source_asset": {
+            "id": 1000039,
+            "name": "source-v0.1.39.tar.gz",
+            "size": 10039,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc7"
+          },
+          "evidence_asset": {
+            "id": 1100039,
+            "name": "evidence-v0.1.39.tar.gz",
+            "size": 20039,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013af"
+          }
+        },
+        {
+          "immutable_release_id": 380040,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.40",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000410",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f8",
+          "ci": {
+            "run_id": 700040,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be0",
+            "job_id": 800040,
+            "artifact_id": 900040,
+            "artifact_name": "gooo-upstream-evidence-v0.1.40.json"
+          },
+          "source_asset": {
+            "id": 1000040,
+            "name": "source-v0.1.40.tar.gz",
+            "size": 10040,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc8"
+          },
+          "evidence_asset": {
+            "id": 1100040,
+            "name": "evidence-v0.1.40.tar.gz",
+            "size": 20040,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b0"
+          }
+        },
+        {
+          "immutable_release_id": 380041,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.41",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000411",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f9",
+          "ci": {
+            "run_id": 700041,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be1",
+            "job_id": 800041,
+            "artifact_id": 900041,
+            "artifact_name": "gooo-upstream-evidence-v0.1.41.json"
+          },
+          "source_asset": {
+            "id": 1000041,
+            "name": "source-v0.1.41.tar.gz",
+            "size": 10041,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc9"
+          },
+          "evidence_asset": {
+            "id": 1100041,
+            "name": "evidence-v0.1.41.tar.gz",
+            "size": 20041,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b1"
+          }
+        },
+        {
+          "immutable_release_id": 380042,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.42",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000412",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fa",
+          "ci": {
+            "run_id": 700042,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be2",
+            "job_id": 800042,
+            "artifact_id": 900042,
+            "artifact_name": "gooo-upstream-evidence-v0.1.42.json"
+          },
+          "source_asset": {
+            "id": 1000042,
+            "name": "source-v0.1.42.tar.gz",
+            "size": 10042,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fca"
+          },
+          "evidence_asset": {
+            "id": 1100042,
+            "name": "evidence-v0.1.42.tar.gz",
+            "size": 20042,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b2"
+          }
+        },
+        {
+          "immutable_release_id": 380043,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.43",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000413",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fb",
+          "ci": {
+            "run_id": 700043,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be3",
+            "job_id": 800043,
+            "artifact_id": 900043,
+            "artifact_name": "gooo-upstream-evidence-v0.1.43.json"
+          },
+          "source_asset": {
+            "id": 1000043,
+            "name": "source-v0.1.43.tar.gz",
+            "size": 10043,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fcb"
+          },
+          "evidence_asset": {
+            "id": 1100043,
+            "name": "evidence-v0.1.43.tar.gz",
+            "size": 20043,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b3"
+          }
+        },
+        {
+          "immutable_release_id": 380044,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.44",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000414",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fc",
+          "ci": {
+            "run_id": 700044,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be4",
+            "job_id": 800044,
+            "artifact_id": 900044,
+            "artifact_name": "gooo-upstream-evidence-v0.1.44.json"
+          },
+          "source_asset": {
+            "id": 1000044,
+            "name": "source-v0.1.44.tar.gz",
+            "size": 10044,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fcc"
+          },
+          "evidence_asset": {
+            "id": 1100044,
+            "name": "evidence-v0.1.44.tar.gz",
+            "size": 20044,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b4"
+          }
+        },
+        {
+          "immutable_release_id": 380045,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.45",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000415",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fd",
+          "ci": {
+            "run_id": 700045,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be5",
+            "job_id": 800045,
+            "artifact_id": 900045,
+            "artifact_name": "gooo-upstream-evidence-v0.1.45.json"
+          },
+          "source_asset": {
+            "id": 1000045,
+            "name": "source-v0.1.45.tar.gz",
+            "size": 10045,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fcd"
+          },
+          "evidence_asset": {
+            "id": 1100045,
+            "name": "evidence-v0.1.45.tar.gz",
+            "size": 20045,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b5"
+          }
+        },
+        {
+          "immutable_release_id": 380046,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.46",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000416",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fe",
+          "ci": {
+            "run_id": 700046,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be6",
+            "job_id": 800046,
+            "artifact_id": 900046,
+            "artifact_name": "gooo-upstream-evidence-v0.1.46.json"
+          },
+          "source_asset": {
+            "id": 1000046,
+            "name": "source-v0.1.46.tar.gz",
+            "size": 10046,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fce"
+          },
+          "evidence_asset": {
+            "id": 1100046,
+            "name": "evidence-v0.1.46.tar.gz",
+            "size": 20046,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b6"
+          }
+        },
+        {
+          "immutable_release_id": 380047,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.47",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000417",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ff",
+          "ci": {
+            "run_id": 700047,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be7",
+            "job_id": 800047,
+            "artifact_id": 900047,
+            "artifact_name": "gooo-upstream-evidence-v0.1.47.json"
+          },
+          "source_asset": {
+            "id": 1000047,
+            "name": "source-v0.1.47.tar.gz",
+            "size": 10047,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fcf"
+          },
+          "evidence_asset": {
+            "id": 1100047,
+            "name": "evidence-v0.1.47.tar.gz",
+            "size": 20047,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b7"
+          }
+        },
+        {
+          "immutable_release_id": 380048,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.48",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000418",
+          "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000800",
+          "ci": {
+            "run_id": 700048,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be8",
+            "job_id": 800048,
+            "artifact_id": 900048,
+            "artifact_name": "gooo-upstream-evidence-v0.1.48.json"
+          },
+          "source_asset": {
+            "id": 1000048,
+            "name": "source-v0.1.48.tar.gz",
+            "size": 10048,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fd0"
+          },
+          "evidence_asset": {
+            "id": 1100048,
+            "name": "evidence-v0.1.48.tar.gz",
+            "size": 20048,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b8"
+          }
+        }
+      ],
+    "merkle_root_digest": "sha256:6104d533cdf56179001e43a3ecf510cfba5ec391f63df85fd56e062a9f514905",
+    "lock_root_digest": "sha256:76a4a5708dc196ef3e1278cdc416d98457f5275ee5f9591ce7ffab9b90351868"
+    },
+    "parent-corrupt-root": {
+      "schema": "gooo/incremental-release-proof/checkpoint/v1",
+      "checkpoint_id": "parent-corrupt-root",
+      "previous_root_digest": "sha256:genesis",
+      "releases": [
+        {
+          "immutable_release_id": 380001,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.1",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003e9",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d1",
+          "ci": {
+            "run_id": 700001,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bb9",
+            "job_id": 800001,
+            "artifact_id": 900001,
+            "artifact_name": "gooo-upstream-evidence-v0.1.1.json"
+          },
+          "source_asset": {
+            "id": 1000001,
+            "name": "source-v0.1.1.tar.gz",
+            "size": 10001,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa1"
+          },
+          "evidence_asset": {
+            "id": 1100001,
+            "name": "evidence-v0.1.1.tar.gz",
+            "size": 20001,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001389"
+          }
+        },
+        {
+          "immutable_release_id": 380002,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.2",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ea",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d2",
+          "ci": {
+            "run_id": 700002,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bba",
+            "job_id": 800002,
+            "artifact_id": 900002,
+            "artifact_name": "gooo-upstream-evidence-v0.1.2.json"
+          },
+          "source_asset": {
+            "id": 1000002,
+            "name": "source-v0.1.2.tar.gz",
+            "size": 10002,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa2"
+          },
+          "evidence_asset": {
+            "id": 1100002,
+            "name": "evidence-v0.1.2.tar.gz",
+            "size": 20002,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138a"
+          }
+        },
+        {
+          "immutable_release_id": 380003,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.3",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003eb",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d3",
+          "ci": {
+            "run_id": 700003,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbb",
+            "job_id": 800003,
+            "artifact_id": 900003,
+            "artifact_name": "gooo-upstream-evidence-v0.1.3.json"
+          },
+          "source_asset": {
+            "id": 1000003,
+            "name": "source-v0.1.3.tar.gz",
+            "size": 10003,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa3"
+          },
+          "evidence_asset": {
+            "id": 1100003,
+            "name": "evidence-v0.1.3.tar.gz",
+            "size": 20003,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138b"
+          }
+        },
+        {
+          "immutable_release_id": 380004,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.4",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ec",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d4",
+          "ci": {
+            "run_id": 700004,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbc",
+            "job_id": 800004,
+            "artifact_id": 900004,
+            "artifact_name": "gooo-upstream-evidence-v0.1.4.json"
+          },
+          "source_asset": {
+            "id": 1000004,
+            "name": "source-v0.1.4.tar.gz",
+            "size": 10004,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa4"
+          },
+          "evidence_asset": {
+            "id": 1100004,
+            "name": "evidence-v0.1.4.tar.gz",
+            "size": 20004,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138c"
+          }
+        },
+        {
+          "immutable_release_id": 380005,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.5",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ed",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d5",
+          "ci": {
+            "run_id": 700005,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbd",
+            "job_id": 800005,
+            "artifact_id": 900005,
+            "artifact_name": "gooo-upstream-evidence-v0.1.5.json"
+          },
+          "source_asset": {
+            "id": 1000005,
+            "name": "source-v0.1.5.tar.gz",
+            "size": 10005,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa5"
+          },
+          "evidence_asset": {
+            "id": 1100005,
+            "name": "evidence-v0.1.5.tar.gz",
+            "size": 20005,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138d"
+          }
+        },
+        {
+          "immutable_release_id": 380006,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.6",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ee",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d6",
+          "ci": {
+            "run_id": 700006,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbe",
+            "job_id": 800006,
+            "artifact_id": 900006,
+            "artifact_name": "gooo-upstream-evidence-v0.1.6.json"
+          },
+          "source_asset": {
+            "id": 1000006,
+            "name": "source-v0.1.6.tar.gz",
+            "size": 10006,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa6"
+          },
+          "evidence_asset": {
+            "id": 1100006,
+            "name": "evidence-v0.1.6.tar.gz",
+            "size": 20006,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138e"
+          }
+        },
+        {
+          "immutable_release_id": 380007,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.7",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ef",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d7",
+          "ci": {
+            "run_id": 700007,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bbf",
+            "job_id": 800007,
+            "artifact_id": 900007,
+            "artifact_name": "gooo-upstream-evidence-v0.1.7.json"
+          },
+          "source_asset": {
+            "id": 1000007,
+            "name": "source-v0.1.7.tar.gz",
+            "size": 10007,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa7"
+          },
+          "evidence_asset": {
+            "id": 1100007,
+            "name": "evidence-v0.1.7.tar.gz",
+            "size": 20007,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000138f"
+          }
+        },
+        {
+          "immutable_release_id": 380008,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.8",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f0",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d8",
+          "ci": {
+            "run_id": 700008,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc0",
+            "job_id": 800008,
+            "artifact_id": 900008,
+            "artifact_name": "gooo-upstream-evidence-v0.1.8.json"
+          },
+          "source_asset": {
+            "id": 1000008,
+            "name": "source-v0.1.8.tar.gz",
+            "size": 10008,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa8"
+          },
+          "evidence_asset": {
+            "id": 1100008,
+            "name": "evidence-v0.1.8.tar.gz",
+            "size": 20008,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001390"
+          }
+        },
+        {
+          "immutable_release_id": 380009,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.9",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f1",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007d9",
+          "ci": {
+            "run_id": 700009,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc1",
+            "job_id": 800009,
+            "artifact_id": 900009,
+            "artifact_name": "gooo-upstream-evidence-v0.1.9.json"
+          },
+          "source_asset": {
+            "id": 1000009,
+            "name": "source-v0.1.9.tar.gz",
+            "size": 10009,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fa9"
+          },
+          "evidence_asset": {
+            "id": 1100009,
+            "name": "evidence-v0.1.9.tar.gz",
+            "size": 20009,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001391"
+          }
+        },
+        {
+          "immutable_release_id": 380010,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.10",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f2",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007da",
+          "ci": {
+            "run_id": 700010,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc2",
+            "job_id": 800010,
+            "artifact_id": 900010,
+            "artifact_name": "gooo-upstream-evidence-v0.1.10.json"
+          },
+          "source_asset": {
+            "id": 1000010,
+            "name": "source-v0.1.10.tar.gz",
+            "size": 10010,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000faa"
+          },
+          "evidence_asset": {
+            "id": 1100010,
+            "name": "evidence-v0.1.10.tar.gz",
+            "size": 20010,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001392"
+          }
+        },
+        {
+          "immutable_release_id": 380011,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.11",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f3",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007db",
+          "ci": {
+            "run_id": 700011,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc3",
+            "job_id": 800011,
+            "artifact_id": 900011,
+            "artifact_name": "gooo-upstream-evidence-v0.1.11.json"
+          },
+          "source_asset": {
+            "id": 1000011,
+            "name": "source-v0.1.11.tar.gz",
+            "size": 10011,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fab"
+          },
+          "evidence_asset": {
+            "id": 1100011,
+            "name": "evidence-v0.1.11.tar.gz",
+            "size": 20011,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001393"
+          }
+        },
+        {
+          "immutable_release_id": 380012,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.12",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f4",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007dc",
+          "ci": {
+            "run_id": 700012,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc4",
+            "job_id": 800012,
+            "artifact_id": 900012,
+            "artifact_name": "gooo-upstream-evidence-v0.1.12.json"
+          },
+          "source_asset": {
+            "id": 1000012,
+            "name": "source-v0.1.12.tar.gz",
+            "size": 10012,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fac"
+          },
+          "evidence_asset": {
+            "id": 1100012,
+            "name": "evidence-v0.1.12.tar.gz",
+            "size": 20012,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001394"
+          }
+        },
+        {
+          "immutable_release_id": 380013,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.13",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f5",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007dd",
+          "ci": {
+            "run_id": 700013,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc5",
+            "job_id": 800013,
+            "artifact_id": 900013,
+            "artifact_name": "gooo-upstream-evidence-v0.1.13.json"
+          },
+          "source_asset": {
+            "id": 1000013,
+            "name": "source-v0.1.13.tar.gz",
+            "size": 10013,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fad"
+          },
+          "evidence_asset": {
+            "id": 1100013,
+            "name": "evidence-v0.1.13.tar.gz",
+            "size": 20013,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001395"
+          }
+        },
+        {
+          "immutable_release_id": 380014,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.14",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f6",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007de",
+          "ci": {
+            "run_id": 700014,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc6",
+            "job_id": 800014,
+            "artifact_id": 900014,
+            "artifact_name": "gooo-upstream-evidence-v0.1.14.json"
+          },
+          "source_asset": {
+            "id": 1000014,
+            "name": "source-v0.1.14.tar.gz",
+            "size": 10014,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fae"
+          },
+          "evidence_asset": {
+            "id": 1100014,
+            "name": "evidence-v0.1.14.tar.gz",
+            "size": 20014,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001396"
+          }
+        },
+        {
+          "immutable_release_id": 380015,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.15",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f7",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007df",
+          "ci": {
+            "run_id": 700015,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc7",
+            "job_id": 800015,
+            "artifact_id": 900015,
+            "artifact_name": "gooo-upstream-evidence-v0.1.15.json"
+          },
+          "source_asset": {
+            "id": 1000015,
+            "name": "source-v0.1.15.tar.gz",
+            "size": 10015,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000faf"
+          },
+          "evidence_asset": {
+            "id": 1100015,
+            "name": "evidence-v0.1.15.tar.gz",
+            "size": 20015,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001397"
+          }
+        },
+        {
+          "immutable_release_id": 380016,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.16",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f8",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e0",
+          "ci": {
+            "run_id": 700016,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc8",
+            "job_id": 800016,
+            "artifact_id": 900016,
+            "artifact_name": "gooo-upstream-evidence-v0.1.16.json"
+          },
+          "source_asset": {
+            "id": 1000016,
+            "name": "source-v0.1.16.tar.gz",
+            "size": 10016,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb0"
+          },
+          "evidence_asset": {
+            "id": 1100016,
+            "name": "evidence-v0.1.16.tar.gz",
+            "size": 20016,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001398"
+          }
+        },
+        {
+          "immutable_release_id": 380017,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.17",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003f9",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e1",
+          "ci": {
+            "run_id": 700017,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bc9",
+            "job_id": 800017,
+            "artifact_id": 900017,
+            "artifact_name": "gooo-upstream-evidence-v0.1.17.json"
+          },
+          "source_asset": {
+            "id": 1000017,
+            "name": "source-v0.1.17.tar.gz",
+            "size": 10017,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb1"
+          },
+          "evidence_asset": {
+            "id": 1100017,
+            "name": "evidence-v0.1.17.tar.gz",
+            "size": 20017,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001399"
+          }
+        },
+        {
+          "immutable_release_id": 380018,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.18",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fa",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e2",
+          "ci": {
+            "run_id": 700018,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bca",
+            "job_id": 800018,
+            "artifact_id": 900018,
+            "artifact_name": "gooo-upstream-evidence-v0.1.18.json"
+          },
+          "source_asset": {
+            "id": 1000018,
+            "name": "source-v0.1.18.tar.gz",
+            "size": 10018,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb2"
+          },
+          "evidence_asset": {
+            "id": 1100018,
+            "name": "evidence-v0.1.18.tar.gz",
+            "size": 20018,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139a"
+          }
+        },
+        {
+          "immutable_release_id": 380019,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.19",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fb",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e3",
+          "ci": {
+            "run_id": 700019,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bcb",
+            "job_id": 800019,
+            "artifact_id": 900019,
+            "artifact_name": "gooo-upstream-evidence-v0.1.19.json"
+          },
+          "source_asset": {
+            "id": 1000019,
+            "name": "source-v0.1.19.tar.gz",
+            "size": 10019,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb3"
+          },
+          "evidence_asset": {
+            "id": 1100019,
+            "name": "evidence-v0.1.19.tar.gz",
+            "size": 20019,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139b"
+          }
+        },
+        {
+          "immutable_release_id": 380020,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.20",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fc",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e4",
+          "ci": {
+            "run_id": 700020,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bcc",
+            "job_id": 800020,
+            "artifact_id": 900020,
+            "artifact_name": "gooo-upstream-evidence-v0.1.20.json"
+          },
+          "source_asset": {
+            "id": 1000020,
+            "name": "source-v0.1.20.tar.gz",
+            "size": 10020,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb4"
+          },
+          "evidence_asset": {
+            "id": 1100020,
+            "name": "evidence-v0.1.20.tar.gz",
+            "size": 20020,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139c"
+          }
+        },
+        {
+          "immutable_release_id": 380021,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.21",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fd",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e5",
+          "ci": {
+            "run_id": 700021,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bcd",
+            "job_id": 800021,
+            "artifact_id": 900021,
+            "artifact_name": "gooo-upstream-evidence-v0.1.21.json"
+          },
+          "source_asset": {
+            "id": 1000021,
+            "name": "source-v0.1.21.tar.gz",
+            "size": 10021,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb5"
+          },
+          "evidence_asset": {
+            "id": 1100021,
+            "name": "evidence-v0.1.21.tar.gz",
+            "size": 20021,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139d"
+          }
+        },
+        {
+          "immutable_release_id": 380022,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.22",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003fe",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e6",
+          "ci": {
+            "run_id": 700022,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bce",
+            "job_id": 800022,
+            "artifact_id": 900022,
+            "artifact_name": "gooo-upstream-evidence-v0.1.22.json"
+          },
+          "source_asset": {
+            "id": 1000022,
+            "name": "source-v0.1.22.tar.gz",
+            "size": 10022,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb6"
+          },
+          "evidence_asset": {
+            "id": 1100022,
+            "name": "evidence-v0.1.22.tar.gz",
+            "size": 20022,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139e"
+          }
+        },
+        {
+          "immutable_release_id": 380023,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.23",
+          "annotated_tag_object_sha": "00000000000000000000000000000000000000000000000000000000000003ff",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e7",
+          "ci": {
+            "run_id": 700023,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bcf",
+            "job_id": 800023,
+            "artifact_id": 900023,
+            "artifact_name": "gooo-upstream-evidence-v0.1.23.json"
+          },
+          "source_asset": {
+            "id": 1000023,
+            "name": "source-v0.1.23.tar.gz",
+            "size": 10023,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb7"
+          },
+          "evidence_asset": {
+            "id": 1100023,
+            "name": "evidence-v0.1.23.tar.gz",
+            "size": 20023,
+            "digest": "sha256:000000000000000000000000000000000000000000000000000000000000139f"
+          }
+        },
+        {
+          "immutable_release_id": 380024,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.24",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000400",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e8",
+          "ci": {
+            "run_id": 700024,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd0",
+            "job_id": 800024,
+            "artifact_id": 900024,
+            "artifact_name": "gooo-upstream-evidence-v0.1.24.json"
+          },
+          "source_asset": {
+            "id": 1000024,
+            "name": "source-v0.1.24.tar.gz",
+            "size": 10024,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb8"
+          },
+          "evidence_asset": {
+            "id": 1100024,
+            "name": "evidence-v0.1.24.tar.gz",
+            "size": 20024,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a0"
+          }
+        },
+        {
+          "immutable_release_id": 380025,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.25",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000401",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007e9",
+          "ci": {
+            "run_id": 700025,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd1",
+            "job_id": 800025,
+            "artifact_id": 900025,
+            "artifact_name": "gooo-upstream-evidence-v0.1.25.json"
+          },
+          "source_asset": {
+            "id": 1000025,
+            "name": "source-v0.1.25.tar.gz",
+            "size": 10025,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fb9"
+          },
+          "evidence_asset": {
+            "id": 1100025,
+            "name": "evidence-v0.1.25.tar.gz",
+            "size": 20025,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a1"
+          }
+        },
+        {
+          "immutable_release_id": 380026,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.26",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000402",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ea",
+          "ci": {
+            "run_id": 700026,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd2",
+            "job_id": 800026,
+            "artifact_id": 900026,
+            "artifact_name": "gooo-upstream-evidence-v0.1.26.json"
+          },
+          "source_asset": {
+            "id": 1000026,
+            "name": "source-v0.1.26.tar.gz",
+            "size": 10026,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fba"
+          },
+          "evidence_asset": {
+            "id": 1100026,
+            "name": "evidence-v0.1.26.tar.gz",
+            "size": 20026,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a2"
+          }
+        },
+        {
+          "immutable_release_id": 380027,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.27",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000403",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007eb",
+          "ci": {
+            "run_id": 700027,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd3",
+            "job_id": 800027,
+            "artifact_id": 900027,
+            "artifact_name": "gooo-upstream-evidence-v0.1.27.json"
+          },
+          "source_asset": {
+            "id": 1000027,
+            "name": "source-v0.1.27.tar.gz",
+            "size": 10027,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbb"
+          },
+          "evidence_asset": {
+            "id": 1100027,
+            "name": "evidence-v0.1.27.tar.gz",
+            "size": 20027,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a3"
+          }
+        },
+        {
+          "immutable_release_id": 380028,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.28",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000404",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ec",
+          "ci": {
+            "run_id": 700028,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd4",
+            "job_id": 800028,
+            "artifact_id": 900028,
+            "artifact_name": "gooo-upstream-evidence-v0.1.28.json"
+          },
+          "source_asset": {
+            "id": 1000028,
+            "name": "source-v0.1.28.tar.gz",
+            "size": 10028,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbc"
+          },
+          "evidence_asset": {
+            "id": 1100028,
+            "name": "evidence-v0.1.28.tar.gz",
+            "size": 20028,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a4"
+          }
+        },
+        {
+          "immutable_release_id": 380029,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.29",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000405",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ed",
+          "ci": {
+            "run_id": 700029,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd5",
+            "job_id": 800029,
+            "artifact_id": 900029,
+            "artifact_name": "gooo-upstream-evidence-v0.1.29.json"
+          },
+          "source_asset": {
+            "id": 1000029,
+            "name": "source-v0.1.29.tar.gz",
+            "size": 10029,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbd"
+          },
+          "evidence_asset": {
+            "id": 1100029,
+            "name": "evidence-v0.1.29.tar.gz",
+            "size": 20029,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a5"
+          }
+        },
+        {
+          "immutable_release_id": 380030,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.30",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000406",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ee",
+          "ci": {
+            "run_id": 700030,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd6",
+            "job_id": 800030,
+            "artifact_id": 900030,
+            "artifact_name": "gooo-upstream-evidence-v0.1.30.json"
+          },
+          "source_asset": {
+            "id": 1000030,
+            "name": "source-v0.1.30.tar.gz",
+            "size": 10030,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbe"
+          },
+          "evidence_asset": {
+            "id": 1100030,
+            "name": "evidence-v0.1.30.tar.gz",
+            "size": 20030,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a6"
+          }
+        },
+        {
+          "immutable_release_id": 380031,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.31",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000407",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ef",
+          "ci": {
+            "run_id": 700031,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd7",
+            "job_id": 800031,
+            "artifact_id": 900031,
+            "artifact_name": "gooo-upstream-evidence-v0.1.31.json"
+          },
+          "source_asset": {
+            "id": 1000031,
+            "name": "source-v0.1.31.tar.gz",
+            "size": 10031,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fbf"
+          },
+          "evidence_asset": {
+            "id": 1100031,
+            "name": "evidence-v0.1.31.tar.gz",
+            "size": 20031,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a7"
+          }
+        },
+        {
+          "immutable_release_id": 380032,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.32",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000408",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f0",
+          "ci": {
+            "run_id": 700032,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd8",
+            "job_id": 800032,
+            "artifact_id": 900032,
+            "artifact_name": "gooo-upstream-evidence-v0.1.32.json"
+          },
+          "source_asset": {
+            "id": 1000032,
+            "name": "source-v0.1.32.tar.gz",
+            "size": 10032,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc0"
+          },
+          "evidence_asset": {
+            "id": 1100032,
+            "name": "evidence-v0.1.32.tar.gz",
+            "size": 20032,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a8"
+          }
+        },
+        {
+          "immutable_release_id": 380033,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.33",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000409",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f1",
+          "ci": {
+            "run_id": 700033,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bd9",
+            "job_id": 800033,
+            "artifact_id": 900033,
+            "artifact_name": "gooo-upstream-evidence-v0.1.33.json"
+          },
+          "source_asset": {
+            "id": 1000033,
+            "name": "source-v0.1.33.tar.gz",
+            "size": 10033,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc1"
+          },
+          "evidence_asset": {
+            "id": 1100033,
+            "name": "evidence-v0.1.33.tar.gz",
+            "size": 20033,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013a9"
+          }
+        },
+        {
+          "immutable_release_id": 380034,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.34",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040a",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f2",
+          "ci": {
+            "run_id": 700034,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bda",
+            "job_id": 800034,
+            "artifact_id": 900034,
+            "artifact_name": "gooo-upstream-evidence-v0.1.34.json"
+          },
+          "source_asset": {
+            "id": 1000034,
+            "name": "source-v0.1.34.tar.gz",
+            "size": 10034,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc2"
+          },
+          "evidence_asset": {
+            "id": 1100034,
+            "name": "evidence-v0.1.34.tar.gz",
+            "size": 20034,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013aa"
+          }
+        },
+        {
+          "immutable_release_id": 380035,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.35",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040b",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f3",
+          "ci": {
+            "run_id": 700035,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bdb",
+            "job_id": 800035,
+            "artifact_id": 900035,
+            "artifact_name": "gooo-upstream-evidence-v0.1.35.json"
+          },
+          "source_asset": {
+            "id": 1000035,
+            "name": "source-v0.1.35.tar.gz",
+            "size": 10035,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc3"
+          },
+          "evidence_asset": {
+            "id": 1100035,
+            "name": "evidence-v0.1.35.tar.gz",
+            "size": 20035,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ab"
+          }
+        },
+        {
+          "immutable_release_id": 380036,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.36",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040c",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f4",
+          "ci": {
+            "run_id": 700036,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bdc",
+            "job_id": 800036,
+            "artifact_id": 900036,
+            "artifact_name": "gooo-upstream-evidence-v0.1.36.json"
+          },
+          "source_asset": {
+            "id": 1000036,
+            "name": "source-v0.1.36.tar.gz",
+            "size": 10036,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc4"
+          },
+          "evidence_asset": {
+            "id": 1100036,
+            "name": "evidence-v0.1.36.tar.gz",
+            "size": 20036,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ac"
+          }
+        },
+        {
+          "immutable_release_id": 380037,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.37",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040d",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f5",
+          "ci": {
+            "run_id": 700037,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bdd",
+            "job_id": 800037,
+            "artifact_id": 900037,
+            "artifact_name": "gooo-upstream-evidence-v0.1.37.json"
+          },
+          "source_asset": {
+            "id": 1000037,
+            "name": "source-v0.1.37.tar.gz",
+            "size": 10037,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc5"
+          },
+          "evidence_asset": {
+            "id": 1100037,
+            "name": "evidence-v0.1.37.tar.gz",
+            "size": 20037,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ad"
+          }
+        },
+        {
+          "immutable_release_id": 380038,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.38",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040e",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f6",
+          "ci": {
+            "run_id": 700038,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bde",
+            "job_id": 800038,
+            "artifact_id": 900038,
+            "artifact_name": "gooo-upstream-evidence-v0.1.38.json"
+          },
+          "source_asset": {
+            "id": 1000038,
+            "name": "source-v0.1.38.tar.gz",
+            "size": 10038,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc6"
+          },
+          "evidence_asset": {
+            "id": 1100038,
+            "name": "evidence-v0.1.38.tar.gz",
+            "size": 20038,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ae"
+          }
+        },
+        {
+          "immutable_release_id": 380039,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.39",
+          "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000040f",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f7",
+          "ci": {
+            "run_id": 700039,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000bdf",
+            "job_id": 800039,
+            "artifact_id": 900039,
+            "artifact_name": "gooo-upstream-evidence-v0.1.39.json"
+          },
+          "source_asset": {
+            "id": 1000039,
+            "name": "source-v0.1.39.tar.gz",
+            "size": 10039,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc7"
+          },
+          "evidence_asset": {
+            "id": 1100039,
+            "name": "evidence-v0.1.39.tar.gz",
+            "size": 20039,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013af"
+          }
+        },
+        {
+          "immutable_release_id": 380040,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.40",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000410",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f8",
+          "ci": {
+            "run_id": 700040,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be0",
+            "job_id": 800040,
+            "artifact_id": 900040,
+            "artifact_name": "gooo-upstream-evidence-v0.1.40.json"
+          },
+          "source_asset": {
+            "id": 1000040,
+            "name": "source-v0.1.40.tar.gz",
+            "size": 10040,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc8"
+          },
+          "evidence_asset": {
+            "id": 1100040,
+            "name": "evidence-v0.1.40.tar.gz",
+            "size": 20040,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b0"
+          }
+        },
+        {
+          "immutable_release_id": 380041,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.41",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000411",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007f9",
+          "ci": {
+            "run_id": 700041,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be1",
+            "job_id": 800041,
+            "artifact_id": 900041,
+            "artifact_name": "gooo-upstream-evidence-v0.1.41.json"
+          },
+          "source_asset": {
+            "id": 1000041,
+            "name": "source-v0.1.41.tar.gz",
+            "size": 10041,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fc9"
+          },
+          "evidence_asset": {
+            "id": 1100041,
+            "name": "evidence-v0.1.41.tar.gz",
+            "size": 20041,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b1"
+          }
+        },
+        {
+          "immutable_release_id": 380042,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.42",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000412",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fa",
+          "ci": {
+            "run_id": 700042,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be2",
+            "job_id": 800042,
+            "artifact_id": 900042,
+            "artifact_name": "gooo-upstream-evidence-v0.1.42.json"
+          },
+          "source_asset": {
+            "id": 1000042,
+            "name": "source-v0.1.42.tar.gz",
+            "size": 10042,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fca"
+          },
+          "evidence_asset": {
+            "id": 1100042,
+            "name": "evidence-v0.1.42.tar.gz",
+            "size": 20042,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b2"
+          }
+        },
+        {
+          "immutable_release_id": 380043,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.43",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000413",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fb",
+          "ci": {
+            "run_id": 700043,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be3",
+            "job_id": 800043,
+            "artifact_id": 900043,
+            "artifact_name": "gooo-upstream-evidence-v0.1.43.json"
+          },
+          "source_asset": {
+            "id": 1000043,
+            "name": "source-v0.1.43.tar.gz",
+            "size": 10043,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fcb"
+          },
+          "evidence_asset": {
+            "id": 1100043,
+            "name": "evidence-v0.1.43.tar.gz",
+            "size": 20043,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b3"
+          }
+        },
+        {
+          "immutable_release_id": 380044,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.44",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000414",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fc",
+          "ci": {
+            "run_id": 700044,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be4",
+            "job_id": 800044,
+            "artifact_id": 900044,
+            "artifact_name": "gooo-upstream-evidence-v0.1.44.json"
+          },
+          "source_asset": {
+            "id": 1000044,
+            "name": "source-v0.1.44.tar.gz",
+            "size": 10044,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fcc"
+          },
+          "evidence_asset": {
+            "id": 1100044,
+            "name": "evidence-v0.1.44.tar.gz",
+            "size": 20044,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b4"
+          }
+        },
+        {
+          "immutable_release_id": 380045,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.45",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000415",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fd",
+          "ci": {
+            "run_id": 700045,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be5",
+            "job_id": 800045,
+            "artifact_id": 900045,
+            "artifact_name": "gooo-upstream-evidence-v0.1.45.json"
+          },
+          "source_asset": {
+            "id": 1000045,
+            "name": "source-v0.1.45.tar.gz",
+            "size": 10045,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fcd"
+          },
+          "evidence_asset": {
+            "id": 1100045,
+            "name": "evidence-v0.1.45.tar.gz",
+            "size": 20045,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b5"
+          }
+        },
+        {
+          "immutable_release_id": 380046,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.46",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000416",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007fe",
+          "ci": {
+            "run_id": 700046,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be6",
+            "job_id": 800046,
+            "artifact_id": 900046,
+            "artifact_name": "gooo-upstream-evidence-v0.1.46.json"
+          },
+          "source_asset": {
+            "id": 1000046,
+            "name": "source-v0.1.46.tar.gz",
+            "size": 10046,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fce"
+          },
+          "evidence_asset": {
+            "id": 1100046,
+            "name": "evidence-v0.1.46.tar.gz",
+            "size": 20046,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b6"
+          }
+        },
+        {
+          "immutable_release_id": 380047,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.47",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000417",
+          "peeled_commit_sha": "00000000000000000000000000000000000000000000000000000000000007ff",
+          "ci": {
+            "run_id": 700047,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be7",
+            "job_id": 800047,
+            "artifact_id": 900047,
+            "artifact_name": "gooo-upstream-evidence-v0.1.47.json"
+          },
+          "source_asset": {
+            "id": 1000047,
+            "name": "source-v0.1.47.tar.gz",
+            "size": 10047,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fcf"
+          },
+          "evidence_asset": {
+            "id": 1100047,
+            "name": "evidence-v0.1.47.tar.gz",
+            "size": 20047,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b7"
+          }
+        },
+        {
+          "immutable_release_id": 380048,
+          "repository": "kimjooyoon/gooo-upstream-fixture",
+          "tag": "v0.1.48",
+          "annotated_tag_object_sha": "0000000000000000000000000000000000000000000000000000000000000418",
+          "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000800",
+          "ci": {
+            "run_id": 700048,
+            "run_sha": "0000000000000000000000000000000000000000000000000000000000000be8",
+            "job_id": 800048,
+            "artifact_id": 900048,
+            "artifact_name": "gooo-upstream-evidence-v0.1.48.json"
+          },
+          "source_asset": {
+            "id": 1000048,
+            "name": "source-v0.1.48.tar.gz",
+            "size": 10048,
+            "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000fd0"
+          },
+          "evidence_asset": {
+            "id": 1100048,
+            "name": "evidence-v0.1.48.tar.gz",
+            "size": 20048,
+            "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013b8"
+          }
+        }
+      ],
+      "merkle_root_digest": "sha256:CORRUPT_MERKLE",
+      "lock_root_digest": "sha256:PARENT_CORRUPT_LOCK"
+    }
+  },
+  "cases": [
+    {
+      "id": "parent-checkpoint-proven",
+      "parent_checkpoint_id": "parent-48",
+      "current": {
+        "schema": "gooo/incremental-release-proof/checkpoint/v1",
+        "checkpoint_id": "current-parent-proof",
+        "previous_root_digest": "sha256:76a4a5708dc196ef3e1278cdc416d98457f5275ee5f9591ce7ffab9b90351868",
+        "releases": [
+          {
+            "immutable_release_id": 490001,
+            "repository": "kimjooyoon/gooo-upstream-fixture",
+            "tag": "v0.1.99",
+            "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000044c",
+            "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000834",
+            "ci": {
+              "run_id": 700100,
+              "run_sha": "0000000000000000000000000000000000000000000000000000000000000c1c",
+              "job_id": 800100,
+              "artifact_id": 900100,
+              "artifact_name": "gooo-upstream-evidence-v0.1.99.json"
+            },
+            "source_asset": {
+              "id": 1000100,
+              "name": "source-v0.1.99.tar.gz",
+              "size": 10100,
+              "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001004"
+            },
+            "evidence_asset": {
+              "id": 1100100,
+              "name": "evidence-v0.1.99.tar.gz",
+              "size": 20100,
+              "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ec"
+            }
+          }
+        ],
+        "merkle_root_digest": "sha256:e49751d2b68ee0a3426406a3247accfb7bb594f92853df21bd70eb102bbdd776",
+        "lock_root_digest": "sha256:8ef70850654b125cde49fb4eeea2e8240db36268f3d92e8e6bdf8b106f4722ce"
+      },
+      "observation": {
+        "parent_immutable": true,
+        "parent_fresh": true,
+        "parent_unambiguous": true,
+        "parent_bounded": true,
+        "changed_evidence_complete": true,
+        "changed_evidence_matches": true,
+        "chain_continuous": true,
+        "parent_survival_proven": null
+      },
+      "reuse_candidate": true,
+      "prior_success": true,
+      "before": {
+        "wall_ms": 100,
+        "peak_rss_kib": 400
+      },
+      "after": {
+        "wall_ms": 90,
+        "peak_rss_kib": 350
+      },
+      "before_identity": {
+        "scenario_id": "parent-checkpoint-proven",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "after_identity": {
+        "scenario_id": "parent-checkpoint-proven",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "replay_ok": true
+    },
+    {
+      "id": "changed-release-evidence-verified",
+      "parent_checkpoint_id": "parent-48",
+      "current": {
+        "schema": "gooo/incremental-release-proof/checkpoint/v1",
+        "checkpoint_id": "current-changed-proof",
+        "previous_root_digest": "sha256:76a4a5708dc196ef3e1278cdc416d98457f5275ee5f9591ce7ffab9b90351868",
+        "releases": [
+          {
+            "immutable_release_id": 490001,
+            "repository": "kimjooyoon/gooo-upstream-fixture",
+            "tag": "v0.1.99",
+            "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000044c",
+            "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000834",
+            "ci": {
+              "run_id": 700100,
+              "run_sha": "0000000000000000000000000000000000000000000000000000000000000c1c",
+              "job_id": 800100,
+              "artifact_id": 900100,
+              "artifact_name": "gooo-upstream-evidence-v0.1.99.json"
+            },
+            "source_asset": {
+              "id": 1000100,
+              "name": "source-v0.1.99.tar.gz",
+              "size": 10100,
+              "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001004"
+            },
+            "evidence_asset": {
+              "id": 1100100,
+              "name": "evidence-v0.1.99.tar.gz",
+              "size": 20100,
+              "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ec"
+            }
+          }
+        ],
+        "merkle_root_digest": "sha256:e49751d2b68ee0a3426406a3247accfb7bb594f92853df21bd70eb102bbdd776",
+        "lock_root_digest": "sha256:10fa89ce290acc3c191833b28a59933b9187c9b5e300793c3150ff73bbd51fcf"
+      },
+      "observation": {
+        "parent_immutable": true,
+        "parent_fresh": true,
+        "parent_unambiguous": true,
+        "parent_bounded": true,
+        "changed_evidence_complete": true,
+        "changed_evidence_matches": true,
+        "chain_continuous": true,
+        "parent_survival_proven": null
+      },
+      "reuse_candidate": true,
+      "prior_success": true,
+      "before": {
+        "wall_ms": 110,
+        "peak_rss_kib": 400
+      },
+      "after": {
+        "wall_ms": 88,
+        "peak_rss_kib": 350
+      },
+      "before_identity": {
+        "scenario_id": "changed-release-evidence-verified",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "after_identity": {
+        "scenario_id": "changed-release-evidence-verified",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "replay_ok": true
+    },
+    {
+      "id": "deterministic-replay",
+      "parent_checkpoint_id": "parent-48",
+      "current": {
+        "schema": "gooo/incremental-release-proof/checkpoint/v1",
+        "checkpoint_id": "current-replay",
+        "previous_root_digest": "sha256:76a4a5708dc196ef3e1278cdc416d98457f5275ee5f9591ce7ffab9b90351868",
+        "releases": [
+          {
+            "immutable_release_id": 490001,
+            "repository": "kimjooyoon/gooo-upstream-fixture",
+            "tag": "v0.1.99",
+            "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000044c",
+            "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000834",
+            "ci": {
+              "run_id": 700100,
+              "run_sha": "0000000000000000000000000000000000000000000000000000000000000c1c",
+              "job_id": 800100,
+              "artifact_id": 900100,
+              "artifact_name": "gooo-upstream-evidence-v0.1.99.json"
+            },
+            "source_asset": {
+              "id": 1000100,
+              "name": "source-v0.1.99.tar.gz",
+              "size": 10100,
+              "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001004"
+            },
+            "evidence_asset": {
+              "id": 1100100,
+              "name": "evidence-v0.1.99.tar.gz",
+              "size": 20100,
+              "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ec"
+            }
+          }
+        ],
+        "merkle_root_digest": "sha256:e49751d2b68ee0a3426406a3247accfb7bb594f92853df21bd70eb102bbdd776",
+        "lock_root_digest": "sha256:3253b4e62d17ab68ddbe206644c0cd2dd9b9f730f5630e36bbb37d3cf1c324eb"
+      },
+      "observation": {
+        "parent_immutable": true,
+        "parent_fresh": true,
+        "parent_unambiguous": true,
+        "parent_bounded": true,
+        "changed_evidence_complete": true,
+        "changed_evidence_matches": true,
+        "chain_continuous": true,
+        "parent_survival_proven": null
+      },
+      "reuse_candidate": true,
+      "prior_success": true,
+      "before": {
+        "wall_ms": 120,
+        "peak_rss_kib": 400
+      },
+      "after": {
+        "wall_ms": 100,
+        "peak_rss_kib": 350
+      },
+      "before_identity": {
+        "scenario_id": "deterministic-replay",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "after_identity": {
+        "scenario_id": "deterministic-replay",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "replay_ok": true
+    },
+    {
+      "id": "parent-checkpoint-missing",
+      "parent_checkpoint_id": "",
+      "current": {
+        "schema": "gooo/incremental-release-proof/checkpoint/v1",
+        "checkpoint_id": "current-missing",
+        "previous_root_digest": "sha256:unknown-parent",
+        "releases": [
+          {
+            "immutable_release_id": 490001,
+            "repository": "kimjooyoon/gooo-upstream-fixture",
+            "tag": "v0.1.99",
+            "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000044c",
+            "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000834",
+            "ci": {
+              "run_id": 700100,
+              "run_sha": "0000000000000000000000000000000000000000000000000000000000000c1c",
+              "job_id": 800100,
+              "artifact_id": 900100,
+              "artifact_name": "gooo-upstream-evidence-v0.1.99.json"
+            },
+            "source_asset": {
+              "id": 1000100,
+              "name": "source-v0.1.99.tar.gz",
+              "size": 10100,
+              "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001004"
+            },
+            "evidence_asset": {
+              "id": 1100100,
+              "name": "evidence-v0.1.99.tar.gz",
+              "size": 20100,
+              "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ec"
+            }
+          }
+        ],
+        "merkle_root_digest": "sha256:e49751d2b68ee0a3426406a3247accfb7bb594f92853df21bd70eb102bbdd776",
+        "lock_root_digest": "sha256:f021228e206c70040712c9642afc1ff960b6b39fc0dea1a6ae1e6bd5c39706e0"
+      },
+      "observation": {
+        "parent_immutable": null,
+        "parent_fresh": null,
+        "parent_unambiguous": null,
+        "parent_bounded": null,
+        "changed_evidence_complete": null,
+        "changed_evidence_matches": null,
+        "chain_continuous": null,
+        "parent_survival_proven": null
+      },
+      "reuse_candidate": true,
+      "prior_success": true,
+      "before": {
+        "wall_ms": 100,
+        "peak_rss_kib": 400
+      },
+      "after": {
+        "wall_ms": 90,
+        "peak_rss_kib": 350
+      },
+      "before_identity": {
+        "scenario_id": "parent-checkpoint-missing",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "after_identity": {
+        "scenario_id": "parent-checkpoint-missing",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "replay_ok": true
+    },
+    {
+      "id": "parent-checkpoint-stale",
+      "parent_checkpoint_id": "parent-48",
+      "current": {
+        "schema": "gooo/incremental-release-proof/checkpoint/v1",
+        "checkpoint_id": "current-stale",
+        "previous_root_digest": "sha256:76a4a5708dc196ef3e1278cdc416d98457f5275ee5f9591ce7ffab9b90351868",
+        "releases": [
+          {
+            "immutable_release_id": 490001,
+            "repository": "kimjooyoon/gooo-upstream-fixture",
+            "tag": "v0.1.99",
+            "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000044c",
+            "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000834",
+            "ci": {
+              "run_id": 700100,
+              "run_sha": "0000000000000000000000000000000000000000000000000000000000000c1c",
+              "job_id": 800100,
+              "artifact_id": 900100,
+              "artifact_name": "gooo-upstream-evidence-v0.1.99.json"
+            },
+            "source_asset": {
+              "id": 1000100,
+              "name": "source-v0.1.99.tar.gz",
+              "size": 10100,
+              "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001004"
+            },
+            "evidence_asset": {
+              "id": 1100100,
+              "name": "evidence-v0.1.99.tar.gz",
+              "size": 20100,
+              "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ec"
+            }
+          }
+        ],
+        "merkle_root_digest": "sha256:e49751d2b68ee0a3426406a3247accfb7bb594f92853df21bd70eb102bbdd776",
+        "lock_root_digest": "sha256:fdf06eadf0162bd1d4084c990cf4595f5620b0d87b84fb35beaa5d0210912996"
+      },
+      "observation": {
+        "parent_immutable": true,
+        "parent_fresh": false,
+        "parent_unambiguous": true,
+        "parent_bounded": true,
+        "changed_evidence_complete": true,
+        "changed_evidence_matches": true,
+        "chain_continuous": true,
+        "parent_survival_proven": null
+      },
+      "reuse_candidate": true,
+      "prior_success": true,
+      "before": {
+        "wall_ms": 100,
+        "peak_rss_kib": 400
+      },
+      "after": {
+        "wall_ms": 90,
+        "peak_rss_kib": 350
+      },
+      "before_identity": {
+        "scenario_id": "parent-checkpoint-stale",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "after_identity": {
+        "scenario_id": "parent-checkpoint-stale",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "replay_ok": true
+    },
+    {
+      "id": "improvement-pair-missing",
+      "parent_checkpoint_id": "parent-48",
+      "current": {
+        "schema": "gooo/incremental-release-proof/checkpoint/v1",
+        "checkpoint_id": "current-pair-missing",
+        "previous_root_digest": "sha256:76a4a5708dc196ef3e1278cdc416d98457f5275ee5f9591ce7ffab9b90351868",
+        "releases": [
+          {
+            "immutable_release_id": 490001,
+            "repository": "kimjooyoon/gooo-upstream-fixture",
+            "tag": "v0.1.99",
+            "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000044c",
+            "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000834",
+            "ci": {
+              "run_id": 700100,
+              "run_sha": "0000000000000000000000000000000000000000000000000000000000000c1c",
+              "job_id": 800100,
+              "artifact_id": 900100,
+              "artifact_name": "gooo-upstream-evidence-v0.1.99.json"
+            },
+            "source_asset": {
+              "id": 1000100,
+              "name": "source-v0.1.99.tar.gz",
+              "size": 10100,
+              "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001004"
+            },
+            "evidence_asset": {
+              "id": 1100100,
+              "name": "evidence-v0.1.99.tar.gz",
+              "size": 20100,
+              "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ec"
+            }
+          }
+        ],
+        "merkle_root_digest": "sha256:e49751d2b68ee0a3426406a3247accfb7bb594f92853df21bd70eb102bbdd776",
+        "lock_root_digest": "sha256:6d665a9edcf15ecad137299944e5f40fef32ca626a1dfe92107949e9f853481d"
+      },
+      "observation": {
+        "parent_immutable": true,
+        "parent_fresh": true,
+        "parent_unambiguous": true,
+        "parent_bounded": true,
+        "changed_evidence_complete": true,
+        "changed_evidence_matches": true,
+        "chain_continuous": true,
+        "parent_survival_proven": null
+      },
+      "reuse_candidate": true,
+      "prior_success": true,
+      "before": {
+        "wall_ms": 100,
+        "peak_rss_kib": 400
+      },
+      "after": {
+        "wall_ms": null,
+        "peak_rss_kib": null
+      },
+      "before_identity": {
+        "scenario_id": "improvement-pair-missing",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "after_identity": {
+        "scenario_id": "improvement-pair-missing",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-b"
+      },
+      "replay_ok": true
+    },
+    {
+      "id": "parent-digest-contradiction",
+      "parent_checkpoint_id": "parent-corrupt-root",
+      "current": {
+        "schema": "gooo/incremental-release-proof/checkpoint/v1",
+        "checkpoint_id": "current-parent-contradiction",
+        "previous_root_digest": "sha256:PARENT_CORRUPT_LOCK",
+        "releases": [
+          {
+            "immutable_release_id": 490001,
+            "repository": "kimjooyoon/gooo-upstream-fixture",
+            "tag": "v0.1.99",
+            "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000044c",
+            "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000834",
+            "ci": {
+              "run_id": 700100,
+              "run_sha": "0000000000000000000000000000000000000000000000000000000000000c1c",
+              "job_id": 800100,
+              "artifact_id": 900100,
+              "artifact_name": "gooo-upstream-evidence-v0.1.99.json"
+            },
+            "source_asset": {
+              "id": 1000100,
+              "name": "source-v0.1.99.tar.gz",
+              "size": 10100,
+              "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001004"
+            },
+            "evidence_asset": {
+              "id": 1100100,
+              "name": "evidence-v0.1.99.tar.gz",
+              "size": 20100,
+              "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ec"
+            }
+          }
+        ],
+        "merkle_root_digest": "sha256:e49751d2b68ee0a3426406a3247accfb7bb594f92853df21bd70eb102bbdd776",
+        "lock_root_digest": "sha256:381facdf0c28f9dd30c6431500b264f53a215d688536367872f0966b004b81a1"
+      },
+      "observation": {
+        "parent_immutable": true,
+        "parent_fresh": true,
+        "parent_unambiguous": true,
+        "parent_bounded": true,
+        "changed_evidence_complete": true,
+        "changed_evidence_matches": true,
+        "chain_continuous": true,
+        "parent_survival_proven": null
+      },
+      "reuse_candidate": true,
+      "prior_success": true,
+      "before": {
+        "wall_ms": 100,
+        "peak_rss_kib": 400
+      },
+      "after": {
+        "wall_ms": 90,
+        "peak_rss_kib": 350
+      },
+      "before_identity": {
+        "scenario_id": "parent-digest-contradiction",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "after_identity": {
+        "scenario_id": "parent-digest-contradiction",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "replay_ok": true
+    },
+    {
+      "id": "changed-asset-digest-mismatch",
+      "parent_checkpoint_id": "parent-48",
+      "current": {
+        "schema": "gooo/incremental-release-proof/checkpoint/v1",
+        "checkpoint_id": "current-asset-mismatch",
+        "previous_root_digest": "sha256:76a4a5708dc196ef3e1278cdc416d98457f5275ee5f9591ce7ffab9b90351868",
+        "releases": [
+          {
+            "immutable_release_id": 490001,
+            "repository": "kimjooyoon/gooo-upstream-fixture",
+            "tag": "v0.1.99",
+            "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000044c",
+            "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000834",
+            "ci": {
+              "run_id": 700100,
+              "run_sha": "0000000000000000000000000000000000000000000000000000000000000c1c",
+              "job_id": 800100,
+              "artifact_id": 900100,
+              "artifact_name": "gooo-upstream-evidence-v0.1.99.json"
+            },
+            "source_asset": {
+              "id": 1000100,
+              "name": "source-v0.1.99.tar.gz",
+              "size": 10100,
+              "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001004"
+            },
+            "evidence_asset": {
+              "id": 1100100,
+              "name": "evidence-v0.1.99.tar.gz",
+              "size": 20100,
+              "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ec"
+            }
+          }
+        ],
+        "merkle_root_digest": "sha256:e49751d2b68ee0a3426406a3247accfb7bb594f92853df21bd70eb102bbdd776",
+        "lock_root_digest": "sha256:2891e7f0e53f620262d796624e55c58b155fe3857b5b0c97427d43dbc3cfe2fd"
+      },
+      "observation": {
+        "parent_immutable": true,
+        "parent_fresh": true,
+        "parent_unambiguous": true,
+        "parent_bounded": true,
+        "changed_evidence_complete": true,
+        "changed_evidence_matches": false,
+        "chain_continuous": true,
+        "parent_survival_proven": null
+      },
+      "reuse_candidate": true,
+      "prior_success": true,
+      "before": {
+        "wall_ms": 100,
+        "peak_rss_kib": 400
+      },
+      "after": {
+        "wall_ms": 90,
+        "peak_rss_kib": 350
+      },
+      "before_identity": {
+        "scenario_id": "changed-asset-digest-mismatch",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "after_identity": {
+        "scenario_id": "changed-asset-digest-mismatch",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "replay_ok": true
+    },
+    {
+      "id": "chain-discontinuity",
+      "parent_checkpoint_id": "parent-48",
+      "current": {
+        "schema": "gooo/incremental-release-proof/checkpoint/v1",
+        "checkpoint_id": "current-chain-gap",
+        "previous_root_digest": "sha256:chain-gap",
+        "releases": [
+          {
+            "immutable_release_id": 490001,
+            "repository": "kimjooyoon/gooo-upstream-fixture",
+            "tag": "v0.1.99",
+            "annotated_tag_object_sha": "000000000000000000000000000000000000000000000000000000000000044c",
+            "peeled_commit_sha": "0000000000000000000000000000000000000000000000000000000000000834",
+            "ci": {
+              "run_id": 700100,
+              "run_sha": "0000000000000000000000000000000000000000000000000000000000000c1c",
+              "job_id": 800100,
+              "artifact_id": 900100,
+              "artifact_name": "gooo-upstream-evidence-v0.1.99.json"
+            },
+            "source_asset": {
+              "id": 1000100,
+              "name": "source-v0.1.99.tar.gz",
+              "size": 10100,
+              "digest": "sha256:0000000000000000000000000000000000000000000000000000000000001004"
+            },
+            "evidence_asset": {
+              "id": 1100100,
+              "name": "evidence-v0.1.99.tar.gz",
+              "size": 20100,
+              "digest": "sha256:00000000000000000000000000000000000000000000000000000000000013ec"
+            }
+          }
+        ],
+        "merkle_root_digest": "sha256:e49751d2b68ee0a3426406a3247accfb7bb594f92853df21bd70eb102bbdd776",
+        "lock_root_digest": "sha256:15f7e0e5a870a684ca92888177ca73be48bb3180853efd9c6a1e4a9fc0b0aa27"
+      },
+      "observation": {
+        "parent_immutable": true,
+        "parent_fresh": true,
+        "parent_unambiguous": true,
+        "parent_bounded": true,
+        "changed_evidence_complete": true,
+        "changed_evidence_matches": true,
+        "chain_continuous": false,
+        "parent_survival_proven": null
+      },
+      "reuse_candidate": true,
+      "prior_success": true,
+      "before": {
+        "wall_ms": 100,
+        "peak_rss_kib": 400
+      },
+      "after": {
+        "wall_ms": 90,
+        "peak_rss_kib": 350
+      },
+      "before_identity": {
+        "scenario_id": "chain-discontinuity",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "after_identity": {
+        "scenario_id": "chain-discontinuity",
+        "source_digest": "sha256:source-a",
+        "contract_digest": "sha256:contract-a",
+        "fixture_digest": "sha256:fixture-a",
+        "toolchain": "go1.27.0/linux/amd64",
+        "runner_digest": "sha256:runner-a"
+      },
+      "replay_ok": true
+    }
+  ]
+}
